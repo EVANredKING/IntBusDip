@@ -207,7 +207,7 @@ CORS_ALLOW_HEADERS = [
 # Настройки API ключей и URL для интеграции с внешними системами
 # ATOM
 ATOM_API_KEY = 'test-atom-apikey'
-ATOM_SYNC_URL = 'http://localhost:8081/api/sync-from-intbus/'  # Адрес API ATOM для приема данных
+ATOM_SYNC_URL = 'http://aton:8001/api/sync-from-intbus/'  # Адрес API ATOM для приема данных
 
 # Порт для запуска IntBus
 INTBUS_PORT = 8082

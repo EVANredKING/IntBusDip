@@ -169,3 +169,5 @@ WARNING 2025-05-19 14:14:53,574 log Not Found: /api/csrf-token/
 WARNING 2025-05-19 14:14:53,575 basehttp "GET /api/csrf-token/ HTTP/1.1" 404 179
 WARNING 2025-05-19 14:14:53,604 log Not Found: /api/sync-from-intbus/
 WARNING 2025-05-19 14:14:53,604 basehttp "POST /api/sync-from-intbus/ HTTP/1.1" 404 179
+INFO 2025-05-19 15:37:17,768 autoreload /app/intbus_project/settings.py changed, reloading.
+INFO 2025-05-19 15:37:18,581 autoreload Watching for file changes with StatReloader
