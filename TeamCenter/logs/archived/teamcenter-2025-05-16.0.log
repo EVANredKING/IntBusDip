@@ -1,68 +1,78 @@
-2025-05-19 12:41:03 [main] INFO  c.t.app.TeamCenterApplication - Starting TeamCenterApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
-2025-05-19 12:41:03 [main] DEBUG c.t.app.TeamCenterApplication - Running with Spring Boot v3.3.0-M2, Spring v6.1.4
-2025-05-19 12:41:03 [main] INFO  c.t.app.TeamCenterApplication - The following 1 profile is active: "docker"
-2025-05-19 12:41:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-19 12:41:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
-2025-05-19 12:41:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2025-05-19 12:41:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
-2025-05-19 12:41:06 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 12:41:06 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2025-05-19 12:41:06 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 12:41:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2702 ms
-2025-05-19 12:41:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-05-19 12:41:06 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/app/data/teamcenterdb user=SA
-2025-05-19 12:41:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-05-19 12:41:06 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:/app/data/teamcenterdb'
-2025-05-19 12:41:06 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-19 12:41:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-05-19 12:41:07 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-05-19 12:41:07 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-19 12:41:07 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-19 12:41:08 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-19 12:41:08 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 12:41:09 [main] INFO  c.t.a.config.DatabaseMigrationConfig - База данных настроена для сохранения после перезапуска сервера.
-2025-05-19 12:41:10 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-19 12:41:10 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
-2025-05-19 12:41:10 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@133d0471, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33cec966, org.springframework.security.web.context.SecurityContextHolderFilter@44c54463, org.springframework.security.web.header.HeaderWriterFilter@240e61, org.springframework.web.filter.CorsFilter@643fed50, org.springframework.security.web.authentication.logout.LogoutFilter@7e916dc2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fc3f1a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7151dd9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65b07b9, org.springframework.security.web.access.ExceptionTranslationFilter@7925e772, org.springframework.security.web.access.intercept.AuthorizationFilter@54da736e]
-2025-05-19 12:41:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
-2025-05-19 12:41:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2025-05-19 12:41:11 [main] INFO  c.t.app.TeamCenterApplication - Started TeamCenterApplication in 9.031 seconds (process running for 10.621)
-2025-05-19 13:00:56 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:00:56 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-05-19 13:00:56 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-05-19 13:01:19 [main] INFO  c.t.app.TeamCenterApplication - Starting TeamCenterApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
-2025-05-19 13:01:19 [main] DEBUG c.t.app.TeamCenterApplication - Running with Spring Boot v3.3.0-M2, Spring v6.1.4
-2025-05-19 13:01:19 [main] INFO  c.t.app.TeamCenterApplication - The following 1 profile is active: "docker"
-2025-05-19 13:01:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-19 13:01:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 2 JPA repository interfaces.
-2025-05-19 13:01:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2025-05-19 13:01:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:01:22 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 13:01:22 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2025-05-19 13:01:22 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 13:01:22 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3459 ms
-2025-05-19 13:01:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-05-19 13:01:23 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/app/data/teamcenterdb user=SA
-2025-05-19 13:01:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-05-19 13:01:23 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:/app/data/teamcenterdb'
-2025-05-19 13:01:24 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-19 13:01:24 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-05-19 13:01:24 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-05-19 13:01:24 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-19 13:01:24 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-19 13:01:25 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-19 13:01:25 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:01:26 [main] INFO  c.t.a.config.DatabaseMigrationConfig - База данных настроена для сохранения после перезапуска сервера.
-2025-05-19 13:01:26 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-19 13:01:27 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
-2025-05-19 13:01:27 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44ba9f25, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53570fff, org.springframework.security.web.context.SecurityContextHolderFilter@4fe9fb65, org.springframework.security.web.header.HeaderWriterFilter@434a2a10, org.springframework.web.filter.CorsFilter@6e5df971, org.springframework.security.web.authentication.logout.LogoutFilter@82382d1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fb51e17, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@722d3ddb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c7787a7, org.springframework.security.web.access.ExceptionTranslationFilter@684eb4a0, org.springframework.security.web.access.intercept.AuthorizationFilter@3531509c]
-2025-05-19 13:01:27 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:01:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2025-05-19 13:01:27 [main] INFO  c.t.app.TeamCenterApplication - Started TeamCenterApplication in 9.617 seconds (process running for 10.657)
-2025-05-19 13:03:39 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-19 13:03:39 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-05-19 13:03:39 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-05-19 13:03:39 [http-nio-3000-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+2025-05-16 16:27:32 [main] INFO  c.t.app.TeamCenterApplication - Starting TeamCenterApplication using Java 24 with PID 14416 (C:\Users\RED KING\IntBusDip\TeamCenter\target\classes started by RED KING in C:\Users\RED KING\IntBusDip\TeamCenter)
+2025-05-16 16:27:32 [main] DEBUG c.t.app.TeamCenterApplication - Running with Spring Boot v3.3.0-M2, Spring v6.1.4
+2025-05-16 16:27:32 [main] INFO  c.t.app.TeamCenterApplication - The following 1 profile is active: "dev"
+2025-05-16 16:27:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 16:27:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+2025-05-16 16:27:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-16 16:27:34 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-16 16:27:34 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-16 16:27:34 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-16 16:27:34 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-16 16:27:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1636 ms
+2025-05-16 16:27:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 16:27:34 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./teamcenterdb user=SA
+2025-05-16 16:27:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 16:27:34 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./teamcenterdb'
+2025-05-16 16:27:35 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 16:27:35 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-16 16:27:35 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 16:27:35 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 16:27:35 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 16:27:36 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 16:27:36 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 16:27:36 [main] INFO  c.t.a.config.DatabaseMigrationConfig - База данных настроена для сохранения после перезапуска сервера.
+2025-05-16 16:27:37 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 16:27:37 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 14261a5b-174d-42b9-ab6f-a2054138c678
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 16:27:37 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-05-16 16:27:37 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5183131d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b3da23f, org.springframework.security.web.context.SecurityContextHolderFilter@79735611, org.springframework.security.web.header.HeaderWriterFilter@4197e859, org.springframework.web.filter.CorsFilter@69c263f8, org.springframework.security.web.authentication.logout.LogoutFilter@787b7796, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d2f8ee7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@593e594f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5058fefb, org.springframework.security.web.access.ExceptionTranslationFilter@8961e55, org.springframework.security.web.access.intercept.AuthorizationFilter@703947bd]
+2025-05-16 16:27:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-16 16:27:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-16 16:27:37 [main] INFO  c.t.app.TeamCenterApplication - Started TeamCenterApplication in 5.422 seconds (process running for 5.879)
+2025-05-16 16:30:34 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m6s18ms710µs900ns).
+2025-05-16 17:31:23 [main] INFO  c.t.app.TeamCenterApplication - Starting TeamCenterApplication using Java 24 with PID 21984 (C:\Users\RED KING\IntBusDip\TeamCenter\target\classes started by RED KING in C:\Users\RED KING\IntBusDip\TeamCenter)
+2025-05-16 17:31:23 [main] DEBUG c.t.app.TeamCenterApplication - Running with Spring Boot v3.3.0-M2, Spring v6.1.4
+2025-05-16 17:31:23 [main] INFO  c.t.app.TeamCenterApplication - The following 1 profile is active: "dev"
+2025-05-16 17:31:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 17:31:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2025-05-16 17:31:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-16 17:31:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-16 17:31:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-16 17:31:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-16 17:31:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-16 17:31:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1550 ms
+2025-05-16 17:31:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-16 17:31:25 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./teamcenterdb user=SA
+2025-05-16 17:31:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-16 17:31:25 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./teamcenterdb'
+2025-05-16 17:31:25 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 17:31:25 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-16 17:31:25 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-16 17:31:26 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 17:31:26 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 17:31:27 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 17:31:27 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 17:31:27 [main] INFO  c.t.a.config.DatabaseMigrationConfig - База данных настроена для сохранения после перезапуска сервера.
+2025-05-16 17:31:27 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 17:31:27 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ee6d6acc-72ca-44e2-9951-449446b83e4f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-16 17:31:27 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-05-16 17:31:28 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79735611, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@758ac46, org.springframework.security.web.context.SecurityContextHolderFilter@78e34499, org.springframework.security.web.header.HeaderWriterFilter@743b7025, org.springframework.web.filter.CorsFilter@4d2f8ee7, org.springframework.security.web.authentication.logout.LogoutFilter@7c9c7e7d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6771efaa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@446fb72e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@593e594f, org.springframework.security.web.access.ExceptionTranslationFilter@70f0c352, org.springframework.security.web.access.intercept.AuthorizationFilter@4197e859]
+2025-05-16 17:31:28 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-16 17:31:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-16 17:31:28 [main] INFO  c.t.app.TeamCenterApplication - Started TeamCenterApplication in 5.318 seconds (process running for 5.711)
+2025-05-16 17:32:24 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-16 17:32:24 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-16 17:32:24 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-05-16 17:32:24 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
 	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
 	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
@@ -151,8 +161,8 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-19 13:03:39 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:32:25 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
 	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
 	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
@@ -241,43 +251,8 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-19 13:25:42 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:25:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-05-19 13:25:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-05-19 13:26:01 [main] INFO  c.t.app.TeamCenterApplication - Starting TeamCenterApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
-2025-05-19 13:26:01 [main] DEBUG c.t.app.TeamCenterApplication - Running with Spring Boot v3.3.0-M2, Spring v6.1.4
-2025-05-19 13:26:01 [main] INFO  c.t.app.TeamCenterApplication - The following 1 profile is active: "docker"
-2025-05-19 13:26:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-19 13:26:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 223 ms. Found 2 JPA repository interfaces.
-2025-05-19 13:26:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2025-05-19 13:26:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:26:06 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 13:26:06 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2025-05-19 13:26:06 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 13:26:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4339 ms
-2025-05-19 13:26:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-05-19 13:26:06 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/app/data/teamcenterdb user=SA
-2025-05-19 13:26:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-05-19 13:26:06 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:/app/data/teamcenterdb'
-2025-05-19 13:26:06 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-19 13:26:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-05-19 13:26:07 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-05-19 13:26:07 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-19 13:26:07 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-19 13:26:08 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-19 13:26:08 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:26:09 [main] INFO  c.t.a.config.DatabaseMigrationConfig - База данных настроена для сохранения после перезапуска сервера.
-2025-05-19 13:26:09 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-19 13:26:10 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
-2025-05-19 13:26:10 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c2a33af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53202b06, org.springframework.security.web.context.SecurityContextHolderFilter@6debf1b8, org.springframework.security.web.header.HeaderWriterFilter@684eb4a0, org.springframework.web.filter.CorsFilter@44ba9f25, org.springframework.security.web.authentication.logout.LogoutFilter@189f3ccd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fe9fb65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5de14222, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53570fff, org.springframework.security.web.access.ExceptionTranslationFilter@5fb0a09e, org.springframework.security.web.access.intercept.AuthorizationFilter@7bf2e475]
-2025-05-19 13:26:10 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:26:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2025-05-19 13:26:10 [main] INFO  c.t.app.TeamCenterApplication - Started TeamCenterApplication in 10.13 seconds (process running for 11.103)
-2025-05-19 13:26:11 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-19 13:26:11 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-05-19 13:26:11 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-05-19 13:26:13 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:32:30 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
 	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
 	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
@@ -366,8 +341,8 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-19 13:26:15 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:32:30 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
 	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
 	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
@@ -456,8 +431,8 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-19 13:26:15 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:32:30 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
 	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
 	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
@@ -546,8 +521,8 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-19 13:26:17 [http-nio-3000-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:32:31 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
 	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
 	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
@@ -636,8 +611,8 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-19 13:26:18 [http-nio-3000-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:32:32 [http-nio-8080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
 	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
 	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
@@ -726,8 +701,8 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-19 13:26:18 [http-nio-3000-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:32:32 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
 	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
 	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
@@ -816,8 +791,8 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-19 13:26:20 [http-nio-3000-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:32:33 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
 	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
 	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
@@ -906,109 +881,97 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-19 13:33:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:33:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-05-19 13:33:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-05-19 13:34:01 [main] INFO  c.t.app.TeamCenterApplication - Starting TeamCenterApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
-2025-05-19 13:34:01 [main] DEBUG c.t.app.TeamCenterApplication - Running with Spring Boot v3.3.0-M2, Spring v6.1.4
-2025-05-19 13:34:01 [main] INFO  c.t.app.TeamCenterApplication - The following 1 profile is active: "docker"
-2025-05-19 13:34:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-19 13:34:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
-2025-05-19 13:34:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2025-05-19 13:34:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:34:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 13:34:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2025-05-19 13:34:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 13:34:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2286 ms
-2025-05-19 13:34:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-05-19 13:34:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/app/data/teamcenterdb user=SA
-2025-05-19 13:34:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-05-19 13:34:04 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:/app/data/teamcenterdb'
-2025-05-19 13:34:04 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-19 13:34:04 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-05-19 13:34:04 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-05-19 13:34:04 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-19 13:34:05 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-19 13:34:06 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-19 13:34:06 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:34:07 [main] INFO  c.t.a.config.DatabaseMigrationConfig - База данных настроена для сохранения после перезапуска сервера.
-2025-05-19 13:34:07 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-19 13:34:07 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
-2025-05-19 13:34:08 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23169374, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f2b1a2f, org.springframework.security.web.context.SecurityContextHolderFilter@19a4cdea, org.springframework.security.web.header.HeaderWriterFilter@5fb0a09e, org.springframework.web.filter.CorsFilter@6c2a33af, org.springframework.security.web.authentication.logout.LogoutFilter@6939f18a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6debf1b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@701da311, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53202b06, org.springframework.security.web.access.ExceptionTranslationFilter@62ff3028, org.springframework.security.web.access.intercept.AuthorizationFilter@4f9e9c21]
-2025-05-19 13:34:08 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:34:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2025-05-19 13:34:08 [main] INFO  c.t.app.TeamCenterApplication - Started TeamCenterApplication in 8.133 seconds (process running for 9.038)
-2025-05-19 13:34:19 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-19 13:34:19 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-05-19 13:34:19 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-05-19 13:42:04 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:42:04 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-05-19 13:42:04 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-05-19 13:42:26 [main] INFO  c.t.app.TeamCenterApplication - Starting TeamCenterApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
-2025-05-19 13:42:26 [main] DEBUG c.t.app.TeamCenterApplication - Running with Spring Boot v3.3.0-M2, Spring v6.1.4
-2025-05-19 13:42:26 [main] INFO  c.t.app.TeamCenterApplication - The following 1 profile is active: "docker"
-2025-05-19 13:42:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-19 13:42:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 2 JPA repository interfaces.
-2025-05-19 13:42:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2025-05-19 13:42:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:42:30 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 13:42:30 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2025-05-19 13:42:30 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 13:42:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4043 ms
-2025-05-19 13:42:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-05-19 13:42:31 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/app/data/teamcenterdb user=SA
-2025-05-19 13:42:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-05-19 13:42:31 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:/app/data/teamcenterdb'
-2025-05-19 13:42:31 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-19 13:42:32 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-05-19 13:42:32 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-05-19 13:42:32 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-19 13:42:32 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-19 13:42:33 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-19 13:42:33 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:42:34 [main] INFO  c.t.a.config.DatabaseMigrationConfig - База данных настроена для сохранения после перезапуска сервера.
-2025-05-19 13:42:34 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-19 13:42:34 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
-2025-05-19 13:42:34 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c2a33af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53202b06, org.springframework.security.web.context.SecurityContextHolderFilter@6debf1b8, org.springframework.security.web.header.HeaderWriterFilter@684eb4a0, org.springframework.web.filter.CorsFilter@44ba9f25, org.springframework.security.web.authentication.logout.LogoutFilter@189f3ccd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fe9fb65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5de14222, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53570fff, org.springframework.security.web.access.ExceptionTranslationFilter@5fb0a09e, org.springframework.security.web.access.intercept.AuthorizationFilter@7bf2e475]
-2025-05-19 13:42:35 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:42:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2025-05-19 13:42:35 [main] INFO  c.t.app.TeamCenterApplication - Started TeamCenterApplication in 9.643 seconds (process running for 10.504)
-2025-05-19 13:42:39 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-19 13:42:39 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-05-19 13:42:39 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-05-19 13:44:13 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:44:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-05-19 13:44:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-05-19 13:48:46 [main] INFO  c.t.app.TeamCenterApplication - Starting TeamCenterApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
-2025-05-19 13:48:46 [main] DEBUG c.t.app.TeamCenterApplication - Running with Spring Boot v3.3.0-M2, Spring v6.1.4
-2025-05-19 13:48:46 [main] INFO  c.t.app.TeamCenterApplication - The following 1 profile is active: "docker"
-2025-05-19 13:48:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-19 13:48:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
-2025-05-19 13:48:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2025-05-19 13:48:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:48:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 13:48:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2025-05-19 13:48:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 13:48:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2324 ms
-2025-05-19 13:48:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-05-19 13:48:49 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/app/data/teamcenterdb user=SA
-2025-05-19 13:48:49 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-05-19 13:48:49 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:/app/data/teamcenterdb'
-2025-05-19 13:48:49 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-19 13:48:49 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-05-19 13:48:49 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-05-19 13:48:50 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-19 13:48:50 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-19 13:48:51 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-19 13:48:51 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-19 13:48:51 [main] INFO  c.t.a.config.DatabaseMigrationConfig - База данных настроена для сохранения после перезапуска сервера.
-2025-05-19 13:48:52 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-19 13:48:52 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: URL [file:/app/frontend/build/index.html]
-2025-05-19 13:48:52 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1ece052b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20dc763b, org.springframework.security.web.context.SecurityContextHolderFilter@34a482d0, org.springframework.security.web.header.HeaderWriterFilter@648f48d3, org.springframework.web.filter.CorsFilter@4c81e7c2, org.springframework.security.web.authentication.logout.LogoutFilter@2d398cfb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6939f18a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8bd9d08, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fe8e318, org.springframework.security.web.access.ExceptionTranslationFilter@6bf34912, org.springframework.security.web.access.intercept.AuthorizationFilter@387ef6a7]
-2025-05-19 13:48:52 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
-2025-05-19 13:48:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2025-05-19 13:48:52 [main] INFO  c.t.app.TeamCenterApplication - Started TeamCenterApplication in 7.351 seconds (process running for 8.482)
-2025-05-19 13:49:10 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-19 13:49:10 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-05-19 13:49:10 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:32:33 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.FileNotFoundException: class path resource [static/index.html] cannot be resolved to URL because it does not exist
+	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:230)
+	at org.springframework.core.io.AbstractFileResolvingResource.lastModified(AbstractFileResolvingResource.java:268)
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:598)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2025-05-16 17:37:54 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 17:37:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-16 17:37:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

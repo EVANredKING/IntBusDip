@@ -28,10 +28,13 @@ FROM amazoncorretto:21-alpine
 WORKDIR /app
 
 # Создаем директории для H2 данных и логов
-RUN mkdir -p /app/logs /app/data
+RUN mkdir -p /app/logs /app/data /app/frontend/build
 
 # Копируем JAR-файл из предыдущего этапа
 COPY --from=build /app/target/*.jar app.jar
+
+# Копируем собранный фронтенд из предыдущего этапа
+COPY --from=build /app/frontend/build /app/frontend/build
 
 # Копируем файл конфигурации для Docker
 COPY src/main/resources/application-docker.properties /app/

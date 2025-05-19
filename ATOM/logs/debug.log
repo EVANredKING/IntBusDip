@@ -1525,3 +1525,55 @@ INFO 2025-05-19 14:54:43,045 autoreload /app/atom_project/docker_settings.py cha
 INFO 2025-05-19 14:54:44,700 autoreload Watching for file changes with StatReloader
 INFO 2025-05-19 14:57:52,049 autoreload /app/atom_project/docker_settings.py changed, reloading.
 INFO 2025-05-19 14:57:52,974 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 15:41:06,609 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 15:41:11,230 basehttp "GET /nomenclature/ HTTP/1.1" 302 0
+INFO 2025-05-19 15:41:11,259 basehttp "GET /login/?next=/nomenclature/ HTTP/1.1" 200 3772
+WARNING 2025-05-19 15:41:11,484 log Not Found: /favicon.ico
+WARNING 2025-05-19 15:41:11,485 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-19 15:41:12,761 basehttp "POST /login/?next=/nomenclature/ HTTP/1.1" 200 4151
+INFO 2025-05-19 15:41:27,137 basehttp "POST /login/?next=/nomenclature/ HTTP/1.1" 200 4151
+INFO 2025-05-19 15:41:29,242 basehttp "GET /register/ HTTP/1.1" 200 5779
+INFO 2025-05-19 15:41:40,568 basehttp "POST /register/ HTTP/1.1" 200 5970
+INFO 2025-05-19 15:41:44,957 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-05-19 15:41:44,971 basehttp "GET /login/?next=/ HTTP/1.1" 200 3759
+INFO 2025-05-19 15:41:51,450 basehttp "POST /login/?next=/ HTTP/1.1" 200 4138
+INFO 2025-05-19 15:41:58,762 basehttp "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-05-19 15:41:58,783 basehttp "GET / HTTP/1.1" 200 6104
+INFO 2025-05-19 15:42:18,646 basehttp "GET /nomenclature/ HTTP/1.1" 302 0
+INFO 2025-05-19 15:42:18,654 basehttp "GET /login/?next=/nomenclature/ HTTP/1.1" 200 3772
+INFO 2025-05-19 15:42:20,663 basehttp "POST /login/?next=/nomenclature/ HTTP/1.1" 200 4151
+INFO 2025-05-19 15:42:24,257 basehttp "POST /login/?next=/nomenclature/ HTTP/1.1" 302 0
+INFO 2025-05-19 15:42:24,278 basehttp "GET /nomenclature/ HTTP/1.1" 200 10362
+INFO 2025-05-19 15:42:32,328 views Отправка данных в IntBus: http://intbus:8000/api/sync/
+INFO 2025-05-19 15:42:32,328 views Заголовки: {'Content-Type': 'application/json'}
+INFO 2025-05-19 15:42:32,395 views Ответ от IntBus: 200, {"status": "success", "message": "API \u0434\u043b\u044f \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u0438 \u0434\u0430\u043d\u043d\u044b\u0445 \u0434\u043e\u0441\u0442\u0
+INFO 2025-05-19 15:42:32,396 basehttp "GET /nomenclature/21/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-19 15:42:32,414 basehttp "GET /nomenclature/ HTTP/1.1" 200 11193
+INFO 2025-05-19 16:00:53,981 autoreload /app/accounts/views.py changed, reloading.
+INFO 2025-05-19 16:00:54,660 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 16:01:23,037 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 16:01:24,739 basehttp "GET /nomenclature/21/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-19 16:01:24,770 basehttp "GET /login/?next=/nomenclature/21/send-to-intbus/ HTTP/1.1" 200 3790
+INFO 2025-05-19 16:01:27,051 basehttp "POST /login/?next=/nomenclature/21/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-19 16:01:27,092 views Отправка данных в IntBus: http://intbus:8000/sync/api/sync/
+INFO 2025-05-19 16:01:27,092 views Заголовки: {'Content-Type': 'application/json'}
+INFO 2025-05-19 16:01:27,207 views Ответ от IntBus: 200, {"status": "success", "message": "\u0414\u0430\u043d\u043d\u044b\u0435 \u043d\u043e\u043c\u0435\u043d\u043a\u043b\u0430\u0442\u0443\u0440\u044b \u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0441\u043e\
+INFO 2025-05-19 16:01:27,209 basehttp "GET /nomenclature/21/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-19 16:01:27,326 basehttp "GET /nomenclature/ HTTP/1.1" 200 11193
+INFO 2025-05-19 16:14:26,152 basehttp "GET /lsi/ HTTP/1.1" 302 0
+INFO 2025-05-19 16:14:26,161 basehttp "GET /login/?next=/lsi/ HTTP/1.1" 200 3763
+INFO 2025-05-19 16:14:27,559 basehttp "POST /login/?next=/lsi/ HTTP/1.1" 302 0
+INFO 2025-05-19 16:14:27,581 basehttp "GET /lsi/ HTTP/1.1" 200 8331
+INFO 2025-05-19 16:14:39,600 views Отправка данных ЛСИ в IntBus: http://intbus:8000/sync/api/sync/
+INFO 2025-05-19 16:14:39,600 views Заголовки: {'Content-Type': 'application/json'}
+INFO 2025-05-19 16:14:39,620 views Ответ от IntBus: 200, {"status": "success", "message": "\u0414\u0430\u043d\u043d\u044b\u0435 \u041b\u0421\u0418 \u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u044b", "id": 7}
+INFO 2025-05-19 16:14:39,622 basehttp "GET /lsi/6/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-19 16:14:39,638 basehttp "GET /lsi/ HTTP/1.1" 200 9126
+INFO 2025-05-19 16:26:06,852 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 16:34:08,457 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 16:35:13,991 basehttp "GET /lsi/ HTTP/1.1" 302 0
+INFO 2025-05-19 16:35:14,078 basehttp "GET /login/?next=/lsi/ HTTP/1.1" 200 3763
+WARNING 2025-05-19 16:35:16,854 log Not Found: /favicon.ico
+WARNING 2025-05-19 16:35:16,859 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-19 16:42:32,418 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 16:48:49,231 autoreload Watching for file changes with StatReloader

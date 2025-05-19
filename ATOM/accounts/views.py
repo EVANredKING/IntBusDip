@@ -18,7 +18,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 # Константы
-INTBUS_SYNC_URL = "http://intbus:8000/api/sync/"
+INTBUS_SYNC_URL = "http://intbus:8000/sync/api/sync/"
 
 # Аутентификация и регистрация
 def login_view(request):

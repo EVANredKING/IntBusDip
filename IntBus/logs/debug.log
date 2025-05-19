@@ -106,3 +106,61 @@ INFO 2025-05-19 11:54:54,015 autoreload /app/intbus_project/docker_settings.py c
 INFO 2025-05-19 11:54:55,011 autoreload Watching for file changes with StatReloader
 INFO 2025-05-19 11:57:52,546 autoreload /app/intbus_project/docker_settings.py changed, reloading.
 INFO 2025-05-19 11:57:53,374 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 12:41:05,994 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 12:42:05,192 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-05-19 12:42:05,207 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+WARNING 2025-05-19 12:42:05,355 log Not Found: /favicon.ico
+WARNING 2025-05-19 12:42:05,356 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-19 12:42:10,843 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-05-19 12:42:10,867 basehttp "GET / HTTP/1.1" 200 7875
+INFO 2025-05-19 12:42:32,334 basehttp "POST /api/sync/ HTTP/1.1" 302 0
+INFO 2025-05-19 12:42:32,337 basehttp "GET /sync/api/sync/ HTTP/1.1" 200 241
+INFO 2025-05-19 12:42:37,011 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-05-19 12:42:37,016 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+INFO 2025-05-19 12:42:38,499 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 200 6237
+INFO 2025-05-19 12:42:43,188 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-05-19 12:42:43,209 basehttp "GET / HTTP/1.1" 200 7875
+INFO 2025-05-19 12:42:46,885 basehttp "GET /nomenclature/ HTTP/1.1" 200 81386
+INFO 2025-05-19 13:01:23,536 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 13:01:27,118 views Получен запрос с Content-Type: application/json
+INFO 2025-05-19 13:01:27,120 views Заголовки запроса: {'Content-Length': '3306', 'Content-Type': 'application/json', 'Host': 'intbus:8000', 'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+INFO 2025-05-19 13:01:27,121 views Content-Length: 3306, Transfer-Encoding: 
+INFO 2025-05-19 13:01:27,121 views Размер тела запроса: 3306 байт
+INFO 2025-05-19 13:01:27,122 views Тело запроса (первые 500 символов): {"apikey": "ATOM-INTBUS-SECRET-KEY", "sender": "ATOM", "data": "\n        <\u041d\u043e\u043c\u0435\u043d\u043a\u043b\u0430\u0442\u0443\u0440\u0430\u0418\u0437\u0434\u0435\u043b\u0438\u0435>\n            <\u0423\u0423\u0418\u0414></\u0423\u0423\u0418\u0414>\n            <\u0421\u041f\u041a_\u0412\u0438\u0434\u041d\u043e\u043c\u0435\u043d\u043a\u043b\u0430\u0442\u0443\u0440\u044b></\u0421\u041f\u041a_\u0412\u0438\u0434\u041d\u043e\u043c\u0435\u043d\u043a\u043b\u0430\u0442\u0443\u0440\u044b>\n    
+INFO 2025-05-19 13:01:27,123 views JSON успешно распарсен стандартным способом
+INFO 2025-05-19 13:01:27,123 views Получены данные: apikey=ATOM-INTBUS-SECRET-KEY, sender=ATOM
+INFO 2025-05-19 13:01:27,201 views Сохранены данные номенклатуры из ATOM с ID: 19
+INFO 2025-05-19 13:01:27,204 basehttp "POST /sync/api/sync/ HTTP/1.1" 200 253
+INFO 2025-05-19 13:01:31,836 basehttp "GET /nomenclature/ HTTP/1.1" 302 0
+WARNING 2025-05-19 13:01:31,843 log Not Found: /nomenclature/accounts/login/
+WARNING 2025-05-19 13:01:31,844 basehttp "GET /nomenclature/accounts/login/?next=/nomenclature/ HTTP/1.1" 404 179
+INFO 2025-05-19 13:01:33,725 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-05-19 13:01:33,742 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+INFO 2025-05-19 13:01:35,262 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-05-19 13:01:35,289 basehttp "GET / HTTP/1.1" 200 7875
+INFO 2025-05-19 13:01:36,909 basehttp "GET /nomenclature/ HTTP/1.1" 200 85637
+INFO 2025-05-19 13:13:57,445 basehttp "GET / HTTP/1.1" 200 7875
+INFO 2025-05-19 13:14:10,206 basehttp "GET /lsi/ HTTP/1.1" 200 33443
+INFO 2025-05-19 13:14:39,604 views Получен запрос с Content-Type: application/json
+INFO 2025-05-19 13:14:39,605 views Заголовки запроса: {'Content-Length': '3433', 'Content-Type': 'application/json', 'Host': 'intbus:8000', 'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+INFO 2025-05-19 13:14:39,605 views Content-Length: 3433, Transfer-Encoding: 
+INFO 2025-05-19 13:14:39,605 views Размер тела запроса: 3433 байт
+INFO 2025-05-19 13:14:39,605 views Тело запроса (первые 500 символов): {"apikey": "ATOM-INTBUS-SECRET-KEY", "sender": "ATOM", "data": "\n        <\u041a\u0443\u043d\u041f\u0435\u0440\u0435\u0447\u0435\u043d\u044c\u041a\u043e\u0434\u043e\u0432\u0424\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445\u0421\u0438\u0441\u0442\u0435\u043c>\n            <\u0428\u0438\u0444\u0440>99</\u0428\u0438\u0444\u0440>\n            <\u0423\u0423\u0418\u0414>99</\u0423\u0423\u0418\u0414>\n            <\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\
+INFO 2025-05-19 13:14:39,606 views JSON успешно распарсен стандартным способом
+INFO 2025-05-19 13:14:39,606 views Получены данные: apikey=ATOM-INTBUS-SECRET-KEY, sender=ATOM
+INFO 2025-05-19 13:14:39,619 views Сохранены данные ЛСИ из ATOM с ID: 7
+INFO 2025-05-19 13:14:39,620 basehttp "POST /sync/api/sync/ HTTP/1.1" 200 198
+INFO 2025-05-19 13:14:43,577 basehttp "GET /lsi/ HTTP/1.1" 302 0
+WARNING 2025-05-19 13:14:43,580 log Not Found: /lsi/accounts/login/
+WARNING 2025-05-19 13:14:43,581 basehttp "GET /lsi/accounts/login/?next=/lsi/ HTTP/1.1" 404 179
+INFO 2025-05-19 13:14:46,982 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-05-19 13:14:46,986 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+INFO 2025-05-19 13:14:48,524 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-05-19 13:14:48,541 basehttp "GET / HTTP/1.1" 200 7875
+INFO 2025-05-19 13:14:50,037 basehttp "GET /lsi/ HTTP/1.1" 200 37862
+INFO 2025-05-19 13:26:06,547 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 13:34:08,205 autoreload Watching for file changes with StatReloader
+WARNING 2025-05-19 13:35:18,711 log Not Found: /favicon.ico
+WARNING 2025-05-19 13:35:18,712 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-19 13:42:31,924 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 13:48:49,101 autoreload Watching for file changes with StatReloader
