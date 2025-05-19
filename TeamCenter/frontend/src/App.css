@@ -1,0 +1,212 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+.navbar {
+  margin-bottom: 2rem;
+}
+
+/* Общие стили */
+body {
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 60px; /* Чтобы футер не перекрывал контент */
+  background-color: #f8f9fa;
+}
+
+/* Стили заголовков */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  color: #212529;
+}
+
+/* Улучшенные стили карточек */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  padding: 1rem;
+  font-weight: 500;
+}
+
+/* Улучшенные стили для кнопок */
+.btn {
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-success {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+  border-color: #146c43;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+}
+
+/* Стили таблиц */
+.table {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+  color: #495057;
+  padding: 1rem 0.75rem;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Анимации для загрузки */
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Улучшенные стили для навигационных элементов */
+.breadcrumb {
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Стили для хлебных крошек */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+}
+
+/* Стилизация scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  .card-deck {
+    display: block;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .btn {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Стили для главной страницы */
+.home-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-card .card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+/* Стили для форм */
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  border-color: #86b7fe;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Стили для ошибок */
+.text-danger {
+  color: #dc3545;
+}
+
+/* Стили для уведомлений */
+.alert {
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+} 

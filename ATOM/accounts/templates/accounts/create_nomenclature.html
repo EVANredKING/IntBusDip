@@ -1,0 +1,156 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Создание номенклатуры | ATOM{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'nomenclature_list' %}">Номенклатура</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Создание</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="form-container">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4 class="card-title mb-0">Создание новой номенклатуры</h4>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="id_uuid" class="form-label">УУИД</label>
+                        {{ form.uuid.errors }}
+                        {{ form.uuid }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="id_cipher" class="form-label">Шифр</label>
+                        {{ form.cipher.errors }}
+                        {{ form.cipher }}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="id_abbreviation" class="form-label">Аббревиатура</label>
+                        {{ form.abbreviation.errors }}
+                        {{ form.abbreviation }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="id_spk_nomenclature_type" class="form-label">СПК Вид номенклатуры</label>
+                        {{ form.spk_nomenclature_type.errors }}
+                        {{ form.spk_nomenclature_type }}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="id_short_name" class="form-label">Наименование краткое</label>
+                        {{ form.short_name.errors }}
+                        {{ form.short_name }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="id_full_name" class="form-label">Наименование полное</label>
+                        {{ form.full_name.errors }}
+                        {{ form.full_name }}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="id_internal_code" class="form-label">Код внутренний</label>
+                        {{ form.internal_code.errors }}
+                        {{ form.internal_code }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="id_effective_date" class="form-label">Дата введения в действие</label>
+                        {{ form.effective_date.errors }}
+                        {{ form.effective_date }}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="id_ekps_code" class="form-label">Код ЕКПС</label>
+                        {{ form.ekps_code.errors }}
+                        {{ form.ekps_code }}
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="id_kvt_code" class="form-label">Код КВТ</label>
+                        {{ form.kvt_code.errors }}
+                        {{ form.kvt_code }}
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="id_drawing_number" class="form-label">Чертежный номер</label>
+                        {{ form.drawing_number.errors }}
+                        {{ form.drawing_number }}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="id_checksum" class="form-label">Контрольная сумма записи</label>
+                        {{ form.checksum.errors }}
+                        {{ form.checksum }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="id_classifier_unique_code" class="form-label">Уникальный код классификатора</label>
+                        {{ form.classifier_unique_code.errors }}
+                        {{ form.classifier_unique_code }}
+                    </div>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            {{ form.deletion_mark }}
+                            <label class="form-check-label" for="id_deletion_mark">
+                                Пометка удаления
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            {{ form.archived }}
+                            <label class="form-check-label" for="id_archived">
+                                Признак архивной записи
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-between">
+                    <a href="{% url 'nomenclature_list' %}" class="btn btn-secondary">Отмена</a>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Добавляем класс form-control к полям формы
+    document.addEventListener('DOMContentLoaded', function() {
+        const textInputs = document.querySelectorAll('input[type="text"], input[type="date"], textarea');
+        textInputs.forEach(input => {
+            if (!input.classList.contains('form-check-input')) {
+                input.classList.add('form-control');
+            }
+        });
+        
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.classList.add('form-check-input');
+        });
+    });
+</script>
+{% endblock %} 

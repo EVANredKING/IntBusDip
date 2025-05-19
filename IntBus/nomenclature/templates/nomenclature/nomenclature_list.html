@@ -1,0 +1,200 @@
+{% extends 'nomenclature/base.html' %}
+
+{% block title %}Номенклатура{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+        <h4 class="mb-0"><i class="fas fa-list me-2"></i>Номенклатура</h4>
+    </div>
+    <div class="card-body">
+        <div class="list-group">
+            {% for item in nomenclatures %}
+                <div class="list-item-container mb-2">
+                    <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" 
+                         data-bs-toggle="collapse" 
+                         href="#collapse{{ item.id }}" 
+                         role="button" 
+                         aria-expanded="false" 
+                         aria-controls="collapse{{ item.id }}">
+                        <div>
+                            <strong>ID: {{ item.id }}</strong>
+                            <span class="ms-2 text-muted">Отправитель: {{ item.sender }}</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapse{{ item.id }}">
+                        <div class="card card-body">
+                            <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <p><strong>API ключ:</strong> {{ item.apikey }}</p>
+                                    <p><strong>Отправитель:</strong> {{ item.sender }}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Данные:</strong></p>
+                                    <pre class="bg-light p-2">{{ item.data }}</pre>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="btn-group">
+                                    <button type="button" 
+                                            class="btn btn-sm btn-primary send-to-teamcenter" 
+                                            data-id="{{ item.id }}" 
+                                            data-bs-toggle="tooltip" 
+                                            title="Отправить в TeamCenter">
+                                        <i class="fas fa-paper-plane"></i> TC
+                                    </button>
+                                    <button type="button" 
+                                            class="btn btn-sm btn-success send-to-atom" 
+                                            data-id="{{ item.id }}" 
+                                            data-bs-toggle="tooltip" 
+                                            title="Отправить в ATOM">
+                                        <i class="fas fa-paper-plane"></i> ATOM
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>Нет данных номенклатуры
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="alert alert-info">
+            <i class="fas fa-info-circle me-2"></i>Система IntBus предоставляет возможность отправки данных в TeamCenter и ATOM.
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для уведомлений -->
+<div class="modal fade" id="notificationModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="notificationTitle">Уведомление</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="notificationBody">
+                <!-- Текст уведомления будет здесь -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Инициализация тултипов Bootstrap
+    document.addEventListener('DOMContentLoaded', function() {
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+        
+        // Обработчик для отправки в TeamCenter
+        document.querySelectorAll('.send-to-teamcenter').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation(); // Предотвращаем всплытие клика, чтобы не срабатывал collapse
+                const itemId = this.getAttribute('data-id');
+                sendData(itemId, 'teamcenter');
+            });
+        });
+        
+        // Обработчик для отправки в ATOM
+        document.querySelectorAll('.send-to-atom').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation(); // Предотвращаем всплытие клика, чтобы не срабатывал collapse
+                const itemId = this.getAttribute('data-id');
+                sendData(itemId, 'atom');
+            });
+        });
+        
+        // Переключение иконки при открытии/закрытии элемента списка
+        document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(item => {
+            item.addEventListener('click', function() {
+                const icon = this.querySelector('.fas');
+                if (icon.classList.contains('fa-chevron-down')) {
+                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                } else {
+                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                }
+            });
+        });
+        
+        // Функция для отправки данных
+        function sendData(itemId, target) {
+            // Блокируем кнопку на время отправки
+            const button = document.querySelector(`.send-to-${target}[data-id="${itemId}"]`);
+            button.disabled = true;
+            button.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Отправка...`;
+            
+            // Отправляем запрос
+            fetch(`/nomenclature/${itemId}/send-to-${target}/`, {
+                method: 'GET',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Разблокируем кнопку
+                button.disabled = false;
+                button.innerHTML = `Отправить в ${target === 'teamcenter' ? 'TeamCenter' : 'ATOM'}`;
+                
+                if (data.status === 'success') {
+                    // Показываем уведомление об успехе
+                    const modalTitle = document.getElementById('notificationTitle');
+                    const modalBody = document.getElementById('notificationBody');
+                    const modal = new bootstrap.Modal(document.getElementById('notificationModal'));
+                    
+                    modalTitle.textContent = 'Успешно!';
+                    modalTitle.className = 'modal-title text-success';
+                    modalBody.textContent = `Данные успешно отправлены в ${target === 'teamcenter' ? 'TeamCenter' : 'ATOM'}.`;
+                    
+                    modal.show();
+                } else if (data.status === 'mapping_required') {
+                    // Требуется маппинг полей - перенаправляем на страницу маппинга
+                    window.location.href = `/mapping/?source_id=${data.source_id}&source_type=${data.source_type}&target=${data.target}`;
+                } else {
+                    // Показываем уведомление об ошибке
+                    const modalTitle = document.getElementById('notificationTitle');
+                    const modalBody = document.getElementById('notificationBody');
+                    const modal = new bootstrap.Modal(document.getElementById('notificationModal'));
+                    
+                    modalTitle.textContent = 'Ошибка!';
+                    modalTitle.className = 'modal-title text-danger';
+                    modalBody.textContent = data.message || 'Произошла ошибка при отправке данных.';
+                    
+                    modal.show();
+                }
+            })
+            .catch(error => {
+                // Разблокируем кнопку
+                button.disabled = false;
+                button.innerHTML = `Отправить в ${target === 'teamcenter' ? 'TeamCenter' : 'ATOM'}`;
+                
+                // Показываем уведомление об ошибке
+                const modalTitle = document.getElementById('notificationTitle');
+                const modalBody = document.getElementById('notificationBody');
+                const modal = new bootstrap.Modal(document.getElementById('notificationModal'));
+                
+                modalTitle.textContent = 'Ошибка!';
+                modalTitle.className = 'modal-title text-danger';
+                modalBody.textContent = 'Произошла ошибка при отправке запроса.';
+                
+                modal.show();
+                console.error('Ошибка:', error);
+            });
+        }
+    });
+</script>
+{% endblock %} 

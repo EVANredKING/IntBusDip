@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  intbus:
+    build:
+      context: ./IntBus
+    ports:
+      - "8082:8000"
+    volumes:
+      - ./IntBus:/app
+      - ./IntBus/db.sqlite3:/app/db.sqlite3
+      - ./IntBus/logs:/app/logs
+      - intbus_data:/app/data
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=intbus_project.docker_settings
+    restart: unless-stopped
+    networks:
+      - intbusdip-network
+
+  atom:
+    build:
+      context: ./ATOM
+    ports:
+      - "8081:8001"
+    volumes:
+      - ./ATOM:/app
+      - ./ATOM/db.sqlite3:/app/db.sqlite3
+      - ./ATOM/logs:/app/logs
+      - atom_data:/app/data
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=atom_project.docker_settings
+    restart: unless-stopped
+    networks:
+      - intbusdip-network
+
+  teamcenter:
+    build:
+      context: ./TeamCenter
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./TeamCenter/data:/app/data
+      - ./TeamCenter/teamcenterdb.mv.db:/app/data/teamcenterdb.mv.db
+      - ./TeamCenter/logs:/app/logs
+      - teamcenter_data:/app/data
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    restart: unless-stopped
+    depends_on:
+      - intbus
+      - atom
+    networks:
+      - intbusdip-network
+
+volumes:
+  intbus_data:
+  atom_data:
+  teamcenter_data:
+
+networks:
+  intbusdip-network:
+    driver: bridge 

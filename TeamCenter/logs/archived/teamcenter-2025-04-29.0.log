@@ -1,0 +1,42 @@
+2025-04-29 10:49:04 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25m55s76ms851µs100ns).
+2025-04-29 12:06:52 [main] INFO  c.t.app.TeamCenterApplication - Starting TeamCenterApplication using Java 24 with PID 30396 (C:\Users\RED KING\IntBusDip\TeamCenter\target\classes started by RED KING in C:\Users\RED KING\IntBusDip\TeamCenter)
+2025-04-29 12:06:52 [main] DEBUG c.t.app.TeamCenterApplication - Running with Spring Boot v3.3.0-M2, Spring v6.1.4
+2025-04-29 12:06:52 [main] INFO  c.t.app.TeamCenterApplication - The following 1 profile is active: "dev"
+2025-04-29 12:06:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-29 12:06:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2025-04-29 12:06:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-29 12:06:53 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-29 12:06:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-29 12:06:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-04-29 12:06:53 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-29 12:06:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1442 ms
+2025-04-29 12:06:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-29 12:06:54 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./teamcenterdb user=SA
+2025-04-29 12:06:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-29 12:06:54 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./teamcenterdb'
+2025-04-29 12:06:54 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-29 12:06:54 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-04-29 12:06:54 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-29 12:06:54 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-29 12:06:54 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-29 12:06:55 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-29 12:06:55 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-29 12:06:55 [main] INFO  c.t.a.config.DatabaseMigrationConfig - База данных настроена для сохранения после перезапуска сервера.
+2025-04-29 12:06:56 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-29 12:06:56 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8e99d134-ae0c-4b69-ac97-8e54e5a3aee2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-29 12:06:56 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-29 12:06:56 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@57a0aeb8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45f70f68, org.springframework.security.web.context.SecurityContextHolderFilter@57063e08, org.springframework.security.web.header.HeaderWriterFilter@36017835, org.springframework.web.filter.CorsFilter@16e3d6d0, org.springframework.security.web.authentication.logout.LogoutFilter@779cb140, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@272f5373, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@799557c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@406d922, org.springframework.security.web.access.ExceptionTranslationFilter@1cb73a92, org.springframework.security.web.access.intercept.AuthorizationFilter@b332eda]
+2025-04-29 12:06:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-29 12:06:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-29 12:06:56 [main] INFO  c.t.app.TeamCenterApplication - Started TeamCenterApplication in 5.341 seconds (process running for 5.744)
+2025-04-29 12:07:38 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-29 12:07:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-29 12:07:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-29 13:10:40 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m25s101ms934µs400ns).
+2025-04-29 13:20:43 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m9s842ms184µs300ns).
+2025-04-29 15:20:45 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h56m11s672ms305µs100ns).

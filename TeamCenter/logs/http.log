@@ -1,0 +1,161 @@
+2025-04-27 19:30:26 - HTTP GET http://localhost:8081/sync/api/csrf-token/
+2025-04-27 19:30:26 - Accept=[application/json, application/*+json]
+2025-04-27 19:30:26 - Response 404 NOT_FOUND
+2025-04-27 19:30:26 - HTTP POST http://localhost:8081/sync/api/sync/
+2025-04-27 19:30:26 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 19:30:26 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, dataType=lsi, source=TeamCenter}, sender=TeamCenter}] as "application/json"
+2025-04-27 19:30:26 - Response 404 NOT_FOUND
+2025-04-27 19:36:26 - HTTP GET http://localhost:8081/sync/api/csrf-token/
+2025-04-27 19:36:26 - Accept=[application/json, application/*+json]
+2025-04-27 19:36:26 - Response 404 NOT_FOUND
+2025-04-27 19:36:26 - HTTP POST http://localhost:8081/sync/api/sync/
+2025-04-27 19:36:26 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 19:36:26 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, dataType=lsi, source=TeamCenter}, sender=TeamCenter}] as "application/json"
+2025-04-27 19:36:26 - Response 404 NOT_FOUND
+2025-04-27 19:39:46 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 19:39:46 - Accept=[application/json, application/*+json]
+2025-04-27 19:39:46 - Response 404 NOT_FOUND
+2025-04-27 19:39:46 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 19:39:46 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 19:39:46 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, dataType=lsi, source=TeamCenter}, sender=TeamCenter}] as "application/json"
+2025-04-27 19:39:46 - Response 400 BAD_REQUEST
+2025-04-27 19:50:07 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 19:50:07 - Accept=[application/json, application/*+json]
+2025-04-27 19:50:08 - Response 404 NOT_FOUND
+2025-04-27 19:50:08 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 19:50:08 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 19:50:08 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, dataType=lsi, source=TeamCenter}, sender=TeamCenter}] as "application/json"
+2025-04-27 19:50:08 - Response 400 BAD_REQUEST
+2025-04-27 19:53:16 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 19:53:16 - Accept=[application/json, application/*+json]
+2025-04-27 19:53:16 - Response 404 NOT_FOUND
+2025-04-27 19:53:16 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 19:53:16 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 19:53:16 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, dataType=lsi, source=TeamCenter}, sender=TeamCenter}] as "application/json"
+2025-04-27 19:53:16 - Response 400 BAD_REQUEST
+2025-04-27 20:10:18 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 20:10:18 - Accept=[application/json, application/*+json]
+2025-04-27 20:10:18 - Response 404 NOT_FOUND
+2025-04-27 20:10:18 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 20:10:18 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 20:10:18 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, dataType=lsi, source=TeamCenter}, sender=TeamCenter}] as "application/json"
+2025-04-27 20:10:18 - Response 400 BAD_REQUEST
+2025-04-27 20:38:02 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 20:38:02 - Accept=[application/json, application/*+json]
+2025-04-27 20:38:02 - Response 404 NOT_FOUND
+2025-04-27 20:38:02 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 20:38:02 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 20:38:02 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, source=TeamCenter}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 20:38:02 - Response 400 BAD_REQUEST
+2025-04-27 20:49:06 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 20:49:06 - Accept=[application/json, application/*+json]
+2025-04-27 20:49:06 - Response 404 NOT_FOUND
+2025-04-27 20:49:06 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 20:49:06 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 20:49:06 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, source=TeamCenter}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 20:49:06 - Response 400 BAD_REQUEST
+2025-04-27 21:12:14 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:12:14 - Accept=[application/json, application/*+json]
+2025-04-27 21:12:14 - Response 404 NOT_FOUND
+2025-04-27 21:12:14 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:12:14 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:12:14 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 21:12:14 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 21:15:41 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:15:42 - Accept=[application/json, application/*+json]
+2025-04-27 21:15:42 - Response 404 NOT_FOUND
+2025-04-27 21:15:42 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:15:42 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:15:42 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={metadata={owner=72, projectList=72, lastModifiedDate=2025-04-27 19:30:22.063, releaseStatus=72, lastModifiedUser=72, creationDate=2025-04-27 19:30:22.063}, code_1=72, position_name=72, dns=72, drawing_number=72, code_2=72, id=3, code_3=72, uuid=72}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 21:15:42 - Response 400 BAD_REQUEST
+2025-04-27 21:20:47 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:20:47 - Accept=[application/json, application/*+json]
+2025-04-27 21:20:47 - Response 404 NOT_FOUND
+2025-04-27 21:20:48 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:20:48 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:20:48 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={metadata={owner=72, projectList=72, lastModifiedDate=2025-04-27 19:30:22.063, releaseStatus=72, lastModifiedUser=72, creationDate=2025-04-27 19:30:22.063}, code_1=72, position_name=72, name=72, dns=72, drawing_number=72, description=72, code_2=72, id=3, code_3=72, uuid=72}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 21:20:48 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 21:25:45 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:25:45 - Accept=[application/json, application/*+json]
+2025-04-27 21:25:45 - Response 404 NOT_FOUND
+2025-04-27 21:25:45 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:25:45 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:25:45 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={metadata={owner=72, projectList=72, lastModifiedDate=2025-04-27 19:30:22.063, releaseStatus=72, lastModifiedUser=72, creationDate=2025-04-27 19:30:22.063}, code_1=72, position_name=72, name=72, dns=72, drawing_number=72, description=72, code_2=72, id=3, code_3=72, uuid=72}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 21:25:45 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 21:26:59 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:26:59 - Accept=[application/json, application/*+json]
+2025-04-27 21:26:59 - Response 404 NOT_FOUND
+2025-04-27 21:26:59 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:26:59 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:26:59 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={metadata={owner=72, projectList=72, lastModifiedDate=2025-04-27 19:30:22.063, releaseStatus=72, lastModifiedUser=72, creationDate=2025-04-27 19:30:22.063}, code_1=72, position_name=72, dns=72, drawing_number=72, code_2=72, id=3, code_3=72, uuid=72}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 21:26:59 - Response 400 BAD_REQUEST
+2025-04-27 21:33:15 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:33:15 - Accept=[application/json, application/*+json]
+2025-04-27 21:33:15 - Response 404 NOT_FOUND
+2025-04-27 21:33:15 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:33:15 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:33:15 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={metadata={owner=72, projectList=72, lastModifiedDate=2025-04-27 19:30:22.063, releaseStatus=72, lastModifiedUser=72, creationDate=2025-04-27 19:30:22.063}, code_1=72, position_name=72, dns=72, name=72, drawing_number=72, code_2=72, id=3, code_3=72, uuid=72, custom_data={name=72}}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 21:33:15 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 21:38:47 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:38:47 - Accept=[application/json, application/*+json]
+2025-04-27 21:38:48 - Response 404 NOT_FOUND
+2025-04-27 21:38:48 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:38:48 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:38:48 - Writing [{atom_name=72, apikey=TEAMCENTER-INTBUS-KEY, data={metadata={owner=72, projectList=72, lastModifiedDate=2025-04-27 19:30:22.063, releaseStatus=72, lastModifiedUser=72, creationDate=2025-04-27 19:30:22.063}, code_1=72, position_name=72, dns=72, drawing_number=72, code_2=72, id=3, code_3=72, uuid=72}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 21:38:48 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 21:42:57 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:42:57 - Accept=[application/json, application/*+json]
+2025-04-27 21:42:57 - Response 404 NOT_FOUND
+2025-04-27 21:42:57 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:42:57 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:42:57 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={metadata={owner=72, projectList=72, lastModifiedDate=2025-04-27 19:30:22.063, releaseStatus=72, lastModifiedUser=72, creationDate=2025-04-27 19:30:22.063}, code_1=72, position_name=72, dns=72, drawing_number=72, code_2=72, id=3, code_3=72, uuid=72}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 21:42:57 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 21:52:26 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:52:26 - Accept=[application/json, application/*+json]
+2025-04-27 21:52:26 - Response 404 NOT_FOUND
+2025-04-27 21:52:26 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:52:26 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:52:26 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={metadata={owner=72, projectList=72, lastModifiedDate=2025-04-27 19:30:22.063, releaseStatus=72, lastModifiedUser=72, creationDate=2025-04-27 19:30:22.063}, code_1=72, position_name=72, dns=72, drawing_number=72, code_2=72, id=3, code_3=72, uuid=72}, sender=TeamCenter, dataType=lsi}] as "application/json"
+2025-04-27 21:52:26 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 21:53:38 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:53:38 - Accept=[application/json, application/*+json]
+2025-04-27 21:53:38 - Response 404 NOT_FOUND
+2025-04-27 21:53:38 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:53:38 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:53:38 - Writing [{data={owner=72, projectList=72, componentID=72, unitOfMeasure=72, lastModifiedDate=2025-04-27 19:30:22.063, position_name=72, description=72, creationDate=2025-04-27 19:30:22.063, type=72, revision=72, itemID=72, name=72, releaseStatus=72, lastModifiedUser=72, id=3}, dataType=lsi, source=TeamCenter}] as "application/json"
+2025-04-27 21:53:38 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 21:56:40 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 21:56:40 - Accept=[application/json, application/*+json]
+2025-04-27 21:56:40 - Response 404 NOT_FOUND
+2025-04-27 21:56:40 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 21:56:40 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 21:56:40 - Writing [{data={code_1=72, position_name=72, dns=72, drawing_number=72, code_2=72, id=3, code_3=72, uuid=72, custom_data={owner=72, projectList=72, releaseStatus=72, lastModifiedUser=72}}, dataType=lsi, source=TeamCenter}] as "application/json"
+2025-04-27 21:56:40 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 22:10:29 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 22:10:29 - Accept=[application/json, application/*+json]
+2025-04-27 22:10:29 - Response 404 NOT_FOUND
+2025-04-27 22:10:29 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 22:10:29 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 22:10:29 - Writing [{data={tc_custom_data={owner=72, projectList=72, releaseStatus=72, lastModifiedUser=72}, code_1=72, position_name=72, dns=72, drawing_number=72, code_2=72, id=3, code_3=72, uuid=72}, dataType=lsi, source=TeamCenter}] as "application/json"
+2025-04-27 22:10:29 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 22:39:08 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 22:39:08 - Accept=[application/json, application/*+json]
+2025-04-27 22:39:08 - Response 404 NOT_FOUND
+2025-04-27 22:39:08 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 22:39:08 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 22:39:08 - Writing [{data={tc_last_modified_user=72, tc_owner=72, code_1=72, position_name=72, dns=72, drawing_number=72, tc_project_list=72, code_2=72, id=3, code_3=72, uuid=72, tc_release_status=72}, dataType=lsi, source=TeamCenter}] as "application/json"
+2025-04-27 22:39:09 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 23:33:31 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 23:33:31 - Accept=[application/json, application/*+json]
+2025-04-27 23:33:31 - Response 404 NOT_FOUND
+2025-04-27 23:33:32 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 23:33:32 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 23:33:32 - Writing [{data={tc_last_modified_user=72, tc_owner=72, code_1=72, position_name=72, dns=72, drawing_number=72, tc_project_list=72, code_2=72, id=3, code_3=72, uuid=72, tc_release_status=72}, dataType=lsi, source=TeamCenter}] as "application/json"
+2025-04-27 23:33:32 - Response 500 INTERNAL_SERVER_ERROR
+2025-04-27 23:33:40 - HTTP GET http://localhost:8081/api/csrf-token/
+2025-04-27 23:33:40 - Accept=[application/json, application/*+json]
+2025-04-27 23:33:40 - Response 404 NOT_FOUND
+2025-04-27 23:33:40 - HTTP POST http://localhost:8081/api/sync-from-intbus/
+2025-04-27 23:33:40 - Accept=[application/json, text/plain, application/*+json, */*]
+2025-04-27 23:33:40 - Writing [{data={tc_last_modified_user=72, tc_owner=72, code_1=72, position_name=72, dns=72, drawing_number=72, tc_project_list=72, code_2=72, id=3, code_3=72, uuid=72, tc_release_status=72}, dataType=lsi, source=TeamCenter}] as "application/json"
+2025-04-27 23:33:40 - Response 500 INTERNAL_SERVER_ERROR

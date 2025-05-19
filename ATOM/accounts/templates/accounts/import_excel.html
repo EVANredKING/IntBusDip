@@ -1,0 +1,53 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Импорт данных | ATOM{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Импорт данных</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="card mx-auto" style="max-width: 600px;">
+    <div class="card-header bg-primary text-white">
+        <h4 class="card-title mb-0">Импорт данных из Excel</h4>
+    </div>
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+                <label for="excel_file" class="form-label">Выберите файл Excel:</label>
+                <input type="file" class="form-control" id="excel_file" name="excel_file" accept=".xlsx,.xls" required>
+                <div class="form-text">Поддерживаются файлы в формате .xlsx и .xls</div>
+            </div>
+            
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="clear_existing" name="clear_existing">
+                <label class="form-check-label" for="clear_existing">Очистить существующие данные перед импортом</label>
+            </div>
+            
+            <div class="alert alert-info">
+                <h5>Требования к файлу Excel:</h5>
+                <ul>
+                    <li>Файл должен содержать листы "Nomenclature" и/или "LSI"</li>
+                    <li>Каждый лист должен иметь заголовки колонок, соответствующие полям модели</li>
+                    <li>Для номенклатуры: abbreviation, short_name, full_name, internal_code, cipher, ekps_code, kvt_code, drawing_number, type_of_nomenclature</li>
+                    <li>Для ЛСИ: name, description</li>
+                </ul>
+            </div>
+            
+            <div class="d-flex justify-content-between">
+                <a href="{% url 'home' %}" class="btn btn-secondary">Отмена</a>
+                <button type="submit" class="btn btn-primary">Импортировать</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %} 

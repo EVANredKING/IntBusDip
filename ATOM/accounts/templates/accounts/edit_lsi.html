@@ -1,0 +1,198 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Редактирование ЛСИ | ATOM{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'lsi_list' %}">ЛСИ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Редактирование</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="form-container">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4 class="card-title mb-0">Редактирование ЛСИ #{{ lsi.id }}</h4>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="id_cipher" class="form-label">Шифр</label>
+                            {{ form.cipher.errors }}
+                            {{ form.cipher }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_uuid" class="form-label">УУИД</label>
+                            {{ form.uuid.errors }}
+                            {{ form.uuid }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_position_name" class="form-label">Наименование позиции</label>
+                            {{ form.position_name.errors }}
+                            {{ form.position_name }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_specialty" class="form-label">Специальность</label>
+                            {{ form.specialty.errors }}
+                            {{ form.specialty }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_drawing_number" class="form-label">Номер чертежа</label>
+                            {{ form.drawing_number.errors }}
+                            {{ form.drawing_number }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_quantity" class="form-label">Количество</label>
+                            {{ form.quantity.errors }}
+                            {{ form.quantity }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_lkn" class="form-label">ЛКН</label>
+                            {{ form.lkn.errors }}
+                            {{ form.lkn }}
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="id_object_type_code" class="form-label">Код типа объекта</label>
+                            {{ form.object_type_code.errors }}
+                            {{ form.object_type_code }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_position_code" class="form-label">Код позиции</label>
+                            {{ form.position_code.errors }}
+                            {{ form.position_code }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_modification_code" class="form-label">Код модификации</label>
+                            {{ form.modification_code.errors }}
+                            {{ form.modification_code }}
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="id_code_1" class="form-label">Код1</label>
+                                    {{ form.code_1.errors }}
+                                    {{ form.code_1 }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="id_code_2" class="form-label">Код2</label>
+                                    {{ form.code_2.errors }}
+                                    {{ form.code_2 }}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="id_code_3" class="form-label">Код3</label>
+                                    {{ form.code_3.errors }}
+                                    {{ form.code_3 }}
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="id_code_4" class="form-label">Код4</label>
+                                    {{ form.code_4.errors }}
+                                    {{ form.code_4 }}
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="id_code_5" class="form-label">Код5</label>
+                                    {{ form.code_5.errors }}
+                                    {{ form.code_5 }}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_parent_record_id" class="form-label">Идентификатор родительской записи</label>
+                            {{ form.parent_record_id.errors }}
+                            {{ form.parent_record_id }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="id_dns" class="form-label">DNS</label>
+                            {{ form.dns.errors }}
+                            {{ form.dns }}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            {{ form.group_indicator }}
+                            <label class="form-check-label" for="id_group_indicator">
+                                Признак группы
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            {{ form.deletion_mark }}
+                            <label class="form-check-label" for="id_deletion_mark">
+                                Пометка удаления
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="id_position_in_staff_structure_type" class="form-label">Позиция в штатной структуре типа</label>
+                    {{ form.position_in_staff_structure_type.errors }}
+                    {{ form.position_in_staff_structure_type }}
+                </div>
+                
+                <div class="d-flex justify-content-between">
+                    <a href="{% url 'lsi_list' %}" class="btn btn-secondary">Отмена</a>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Добавляем класс form-control к полям формы
+    document.addEventListener('DOMContentLoaded', function() {
+        const textInputs = document.querySelectorAll('input[type="text"], input[type="number"], textarea');
+        textInputs.forEach(input => {
+            if (!input.classList.contains('form-check-input')) {
+                input.classList.add('form-control');
+            }
+        });
+        
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.classList.add('form-check-input');
+        });
+    });
+</script>
+{% endblock %} 

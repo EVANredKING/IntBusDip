@@ -1,0 +1,1527 @@
+INFO 2025-05-05 11:45:53,746 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 11:46:16,292 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-05-05 11:46:18,005 basehttp "GET /login/?next=/ HTTP/1.1" 200 3759
+WARNING 2025-05-05 11:46:21,097 log Not Found: /favicon.ico
+WARNING 2025-05-05 11:46:21,119 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-05 11:49:00,690 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 11:52:21,149 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 12:10:25,084 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 12:22:55,918 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 12:41:04,759 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 12:43:26,651 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 12:47:28,204 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 12:51:36,854 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 13:03:50,653 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 13:10:56,927 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 15:03:30,118 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 15:07:55,924 basehttp "POST /login/?next=/ HTTP/1.1" 200 4138
+INFO 2025-05-05 15:08:02,843 basehttp "POST /login/?next=/ HTTP/1.1" 200 4138
+INFO 2025-05-05 15:08:12,789 basehttp "POST /login/?next=/ HTTP/1.1" 200 4138
+INFO 2025-05-05 15:08:16,337 basehttp "GET /register/ HTTP/1.1" 200 5779
+INFO 2025-05-05 15:08:25,249 basehttp "GET /login/ HTTP/1.1" 200 3762
+INFO 2025-05-05 15:08:33,276 basehttp "POST /login/ HTTP/1.1" 200 4141
+INFO 2025-05-05 15:08:35,140 basehttp "GET /register/ HTTP/1.1" 200 5779
+INFO 2025-05-05 15:08:49,386 basehttp "POST /register/ HTTP/1.1" 302 0
+INFO 2025-05-05 15:08:49,402 basehttp "GET /login/ HTTP/1.1" 200 4116
+INFO 2025-05-05 15:08:58,832 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-05-05 15:08:58,879 basehttp "GET / HTTP/1.1" 200 6104
+INFO 2025-05-05 15:09:01,566 basehttp "GET /nomenclature/ HTTP/1.1" 200 5253
+INFO 2025-05-05 15:09:05,816 basehttp "GET /nomenclature/create/ HTTP/1.1" 200 10928
+INFO 2025-05-05 15:09:21,626 basehttp "POST /nomenclature/create/ HTTP/1.1" 302 0
+INFO 2025-05-05 15:09:21,647 basehttp "GET /nomenclature/ HTTP/1.1" 200 6139
+INFO 2025-05-05 15:09:22,965 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-05 15:09:22,966 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-05 15:09:22,971 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f842e302020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f842e302020>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f842e302020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f842e302020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-05 15:09:23,007 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-05 15:09:23,075 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-05 15:19:48,956 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 15:20:51,052 basehttp "GET /nomenclature/ HTTP/1.1" 200 6139
+WARNING 2025-05-05 15:21:00,790 log Not Found: /favicon.ico
+WARNING 2025-05-05 15:21:00,792 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-16 17:38:43,944 autoreload Watching for file changes with StatReloader
+INFO 2025-05-16 17:38:46,850 basehttp "GET / HTTP/1.1" 200 6104
+WARNING 2025-05-16 17:38:48,867 log Not Found: /favicon.ico
+WARNING 2025-05-16 17:38:48,868 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-16 17:38:51,696 basehttp "GET /nomenclature/ HTTP/1.1" 200 6139
+INFO 2025-05-16 17:38:57,394 basehttp "GET /nomenclature/ HTTP/1.1" 200 6139
+INFO 2025-05-16 17:38:58,596 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:38:58,596 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:38:59,533 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3289657490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f3289657490>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3289657490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3289657490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:38:59,599 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:38:59,617 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:41:58,609 autoreload Watching for file changes with StatReloader
+INFO 2025-05-16 17:42:04,695 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:04,696 views Заголовки: {'Content-Type': 'application/json'}
+INFO 2025-05-16 17:42:04,699 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:04,701 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:04,706 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8627f40610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8627f40610>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8627f40610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8627f40610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+ERROR 2025-05-16 17:42:04,707 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8627f401f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8627f401f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8627f401f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8627f401f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:04,772 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:04,823 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+WARNING 2025-05-16 17:42:04,956 log Not Found: /favicon.ico
+WARNING 2025-05-16 17:42:04,959 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-16 17:42:07,782 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:07,783 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:07,786 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628067010>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628067010>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628067010>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628067010>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:07,793 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:07,842 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:08,679 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:08,679 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:08,682 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628067ac0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628067ac0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628067ac0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628067ac0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:08,688 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:08,717 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:09,407 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:09,408 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:09,410 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f86280671f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f86280671f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f86280671f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f86280671f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:09,415 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:09,435 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:10,090 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:10,091 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:10,094 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628066410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628066410>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628066410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628066410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:10,098 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:10,122 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:10,891 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:10,892 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:10,895 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f86280662f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f86280662f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f86280662f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f86280662f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:10,901 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:10,930 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:11,320 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:11,320 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:11,322 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628064e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628064e50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628064e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628064e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:11,325 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:11,346 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:12,002 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:12,004 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:12,007 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628066410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628066410>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628066410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628066410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:12,011 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:12,040 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:12,556 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:12,557 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:12,560 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628066830>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628066830>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628066830>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628066830>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:12,567 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:12,592 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:13,084 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:13,084 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:13,087 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628065960>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628065960>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628065960>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628065960>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:13,092 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:13,115 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:13,830 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:13,831 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:13,834 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628065510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628065510>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628065510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628065510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:13,838 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:13,863 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:14,275 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:14,275 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:14,277 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628064bb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628064bb0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628064bb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628064bb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:14,281 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:14,305 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:14,667 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:14,668 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:14,669 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628065b70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628065b70>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628065b70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628065b70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:14,673 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:14,756 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:15,159 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:15,160 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:15,162 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628064ee0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628064ee0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628064ee0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628064ee0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:15,167 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:15,197 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:42:15,766 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:42:15,768 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:42:15,772 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628036fb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8628036fb0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628036fb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8628036fb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:42:15,777 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:42:15,807 basehttp "GET /nomenclature/ HTTP/1.1" 200 7475
+INFO 2025-05-16 17:54:19,616 autoreload Watching for file changes with StatReloader
+INFO 2025-05-16 17:54:47,074 basehttp "GET / HTTP/1.1" 200 6104
+WARNING 2025-05-16 17:54:49,783 log Not Found: /favicon.ico
+WARNING 2025-05-16 17:54:49,784 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+WARNING 2025-05-16 17:55:58,782 base Session data corrupted
+INFO 2025-05-16 17:55:58,784 basehttp "GET /nomenclature/ HTTP/1.1" 302 0
+WARNING 2025-05-16 17:55:58,814 base Session data corrupted
+INFO 2025-05-16 17:55:58,817 basehttp "GET /login/?next=/nomenclature/ HTTP/1.1" 200 3772
+WARNING 2025-05-16 17:56:06,448 base Session data corrupted
+INFO 2025-05-16 17:56:06,450 basehttp "POST /login/?next=/nomenclature/ HTTP/1.1" 200 4151
+WARNING 2025-05-16 17:56:09,651 base Session data corrupted
+INFO 2025-05-16 17:56:09,678 basehttp "GET /register/ HTTP/1.1" 200 5779
+WARNING 2025-05-16 17:56:20,924 base Session data corrupted
+INFO 2025-05-16 17:56:20,930 basehttp "POST /register/ HTTP/1.1" 200 5970
+INFO 2025-05-16 17:56:42,496 basehttp "POST /register/ HTTP/1.1" 302 0
+WARNING 2025-05-16 17:56:42,513 base Session data corrupted
+INFO 2025-05-16 17:56:42,514 basehttp "GET /login/ HTTP/1.1" 200 4113
+WARNING 2025-05-16 17:56:50,761 base Session data corrupted
+INFO 2025-05-16 17:56:50,777 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:56:50,803 basehttp "GET / HTTP/1.1" 200 6101
+INFO 2025-05-16 17:56:52,657 basehttp "GET /nomenclature/ HTTP/1.1" 200 6136
+INFO 2025-05-16 17:56:54,526 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 17:56:54,527 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 17:56:54,534 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe6a35761a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fe6a35761a0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe6a35761a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe6a35761a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 17:56:54,545 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 17:56:54,564 basehttp "GET /nomenclature/ HTTP/1.1" 200 7472
+INFO 2025-05-16 18:14:07,284 autoreload Watching for file changes with StatReloader
+INFO 2025-05-16 18:14:11,267 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 18:14:11,268 views Заголовки: {'Content-Type': 'application/json'}
+INFO 2025-05-16 18:14:11,271 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 18:14:11,272 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 18:14:11,276 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9735c78c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f9735c78c10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9735c78c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9735c78c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+ERROR 2025-05-16 18:14:11,277 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9735c78820>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f9735c78820>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9735c78820>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9735c78820>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 18:14:11,302 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 18:14:11,348 basehttp "GET /nomenclature/ HTTP/1.1" 200 7472
+WARNING 2025-05-16 18:14:11,557 log Not Found: /favicon.ico
+WARNING 2025-05-16 18:14:11,559 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-16 18:14:15,373 views Отправка данных в IntBus: http://localhost:8082/sync/api/sync/
+INFO 2025-05-16 18:14:15,374 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-16 18:14:15,376 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9734bb6dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f9734bb6dd0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9734bb6dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /sync/api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9734bb6dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-16 18:14:15,381 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-16 18:14:15,401 basehttp "GET /nomenclature/ HTTP/1.1" 200 7472
+INFO 2025-05-18 14:24:06,513 autoreload Watching for file changes with StatReloader
+WARNING 2025-05-18 14:25:03,967 base Session data corrupted
+INFO 2025-05-18 14:25:03,976 basehttp "GET /nomenclature/ HTTP/1.1" 302 0
+WARNING 2025-05-18 14:25:04,061 base Session data corrupted
+INFO 2025-05-18 14:25:04,064 basehttp "GET /login/?next=/nomenclature/ HTTP/1.1" 200 3772
+WARNING 2025-05-18 14:25:05,703 log Not Found: /favicon.ico
+WARNING 2025-05-18 14:25:05,704 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+WARNING 2025-05-18 14:25:14,480 base Session data corrupted
+INFO 2025-05-18 14:25:14,482 basehttp "POST /login/?next=/nomenclature/ HTTP/1.1" 200 4151
+WARNING 2025-05-18 14:25:23,090 base Session data corrupted
+INFO 2025-05-18 14:25:23,105 basehttp "POST /login/?next=/nomenclature/ HTTP/1.1" 302 0
+INFO 2025-05-18 14:25:23,147 basehttp "GET /nomenclature/ HTTP/1.1" 200 6139
+INFO 2025-05-18 14:25:28,229 views Отправка данных в IntBus: http://localhost:8082/api/sync/
+INFO 2025-05-18 14:25:28,229 views Заголовки: {'Content-Type': 'application/json'}
+ERROR 2025-05-18 14:25:28,234 views Ошибка при отправке данных: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f78d2a1d300>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f78d2a1d300>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f78d2a1d300>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/accounts/views.py", line 176, in send_nomenclature_to_intbus
+    response = requests.post(INTBUS_SYNC_URL, json=data, headers=headers)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8082): Max retries exceeded with url: /api/sync/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f78d2a1d300>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO 2025-05-18 14:25:28,248 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-18 14:25:28,269 basehttp "GET /nomenclature/ HTTP/1.1" 200 7465
+INFO 2025-05-18 14:29:15,469 autoreload /app/accounts/views.py changed, reloading.
+INFO 2025-05-18 14:29:16,346 autoreload Watching for file changes with StatReloader
+INFO 2025-05-18 15:08:56,422 autoreload Watching for file changes with StatReloader
+WARNING 2025-05-18 15:09:38,277 base Session data corrupted
+INFO 2025-05-18 15:09:38,288 basehttp "GET /nomenclature/ HTTP/1.1" 302 0
+WARNING 2025-05-18 15:09:38,317 base Session data corrupted
+INFO 2025-05-18 15:09:38,319 basehttp "GET /login/?next=/nomenclature/ HTTP/1.1" 200 3772
+WARNING 2025-05-18 15:09:40,371 base Session data corrupted
+INFO 2025-05-18 15:09:40,385 basehttp "POST /login/?next=/nomenclature/ HTTP/1.1" 302 0
+INFO 2025-05-18 15:09:40,414 basehttp "GET /nomenclature/ HTTP/1.1" 200 6139
+WARNING 2025-05-18 15:09:45,902 base Session data corrupted
+INFO 2025-05-18 15:09:45,904 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+WARNING 2025-05-18 15:09:45,922 base Session data corrupted
+INFO 2025-05-18 15:09:45,924 basehttp "GET /login/?next=/nomenclature/1/send-to-intbus/ HTTP/1.1" 200 3789
+WARNING 2025-05-18 15:09:47,740 base Session data corrupted
+INFO 2025-05-18 15:09:47,752 basehttp "POST /login/?next=/nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-18 15:09:47,767 views Отправка данных в IntBus: http://intbus:8000/api/sync/
+INFO 2025-05-18 15:09:47,768 views Заголовки: {'Content-Type': 'application/json'}
+INFO 2025-05-18 15:09:47,826 views Ответ от IntBus: 200, {"status": "success", "message": "API \u0434\u043b\u044f \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u0438 \u0434\u0430\u043d\u043d\u044b\u0445 \u0434\u043e\u0441\u0442\u0
+INFO 2025-05-18 15:09:47,827 basehttp "GET /nomenclature/1/send-to-intbus/ HTTP/1.1" 302 0
+INFO 2025-05-18 15:09:47,895 basehttp "GET /nomenclature/ HTTP/1.1" 200 6970
+INFO 2025-05-19 14:54:43,045 autoreload /app/atom_project/docker_settings.py changed, reloading.
+INFO 2025-05-19 14:54:44,700 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 14:57:52,049 autoreload /app/atom_project/docker_settings.py changed, reloading.
+INFO 2025-05-19 14:57:52,974 autoreload Watching for file changes with StatReloader

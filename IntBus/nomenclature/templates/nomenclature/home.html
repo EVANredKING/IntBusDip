@@ -1,0 +1,76 @@
+{% extends 'nomenclature/base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">
+                    <i class="fas fa-home me-2"></i>Добро пожаловать в IntBus
+                </h3>
+            </div>
+            <div class="card-body">
+                <p class="lead">
+                    IntBus - это информационная система для просмотра данных номенклатуры и логической структуры изделий (ЛСИ).
+                </p>
+                <p>
+                    <strong>Данная версия системы предназначена только для просмотра данных.</strong>
+                    Вы не можете создавать, редактировать или удалять номенклатуру или записи ЛСИ.
+                </p>
+                <div class="alert alert-info">
+                    <h5><i class="fas fa-info-circle me-2"></i>Информация о данных</h5>
+                    <p class="mb-0">
+                        В настоящий момент в системе содержится:
+                        <ul>
+                            <li><strong>{{ nomenclature_count }}</strong> записей номенклатуры</li>
+                            <li><strong>{{ lsi_count }}</strong> записей ЛСИ</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-list me-2"></i>Номенклатура
+                </h4>
+            </div>
+            <div class="card-body">
+                <p>
+                    Просмотр номенклатуры изделий и компонентов с подробной информацией
+                    о каждом элементе, включая шифры, коды и чертежи.
+                </p>
+                <a href="{% url 'nomenclature_list' %}" class="btn btn-info">
+                    <i class="fas fa-external-link-alt me-1"></i>Просмотр номенклатуры
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-sitemap me-2"></i>Логическая структура изделий
+                </h4>
+            </div>
+            <div class="card-body">
+                <p>
+                    Просмотр логической структуры изделий (ЛСИ), описывающей состав и взаимосвязи
+                    между компонентами сложных изделий.
+                </p>
+                <a href="{% url 'lsi_list' %}" class="btn btn-success">
+                    <i class="fas fa-external-link-alt me-1"></i>Просмотр ЛСИ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

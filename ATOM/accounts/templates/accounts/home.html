@@ -1,0 +1,70 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Главная | ATOM{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-light p-5 rounded">
+            <h1 class="display-4">ATOM - Система управления номенклатурой</h1>
+            <p class="lead">Добро пожаловать в систему ATOM для управления номенклатурой и ЛСИ.</p>
+            <hr class="my-4">
+            <p>Выберите раздел для работы или создайте новую запись.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Номенклатура</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Всего записей: <span class="badge bg-primary">{{ nomenclature_count }}</span></p>
+                <a href="{% url 'nomenclature_list' %}" class="btn btn-primary">Просмотр списка</a>
+                <a href="{% url 'create_nomenclature' %}" class="btn btn-success">Создать новую</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Логическая структура изделия (ЛСИ)</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Всего записей: <span class="badge bg-primary">{{ lsi_count }}</span></p>
+                <a href="{% url 'lsi_list' %}" class="btn btn-primary">Просмотр списка</a>
+                <a href="{% url 'create_lsi' %}" class="btn btn-success">Создать новую</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Экспорт данных</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Выгрузка данных в Excel для дальнейшей обработки</p>
+                <a href="{% url 'export_excel' %}" class="btn btn-primary">Экспорт в Excel</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Импорт данных</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Загрузка данных из Excel файла</p>
+                <a href="{% url 'import_excel' %}" class="btn btn-primary">Импорт из Excel</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

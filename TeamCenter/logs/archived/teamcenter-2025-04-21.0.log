@@ -1,0 +1,42 @@
+2025-04-21 12:38:06 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h19m48s894ms795µs400ns).
+2025-04-21 14:28:24 [http-nio-8080-exec-6] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, dataType, data]
+2025-04-21 14:28:24 [http-nio-8080-exec-6] INFO  c.t.app.controller.SyncController - Обработка номенклатуры из IntBus с внутренним кодом: Н7
+2025-04-21 14:28:24 [http-nio-8080-exec-6] INFO  c.t.app.controller.SyncController - Найдена существующая номенклатура с ID: 10
+2025-04-21 14:28:24 [http-nio-8080-exec-6] INFO  c.t.app.controller.SyncController - Номенклатура с ID 10 успешно обновлена
+2025-04-21 14:28:48 [http-nio-8080-exec-8] INFO  c.t.a.c.NomenclatureController - Номенклатура с ID 10 успешно удалена
+2025-04-21 14:29:46 [http-nio-8080-exec-9] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, dataType, data]
+2025-04-21 14:29:46 [http-nio-8080-exec-9] INFO  c.t.app.controller.SyncController - Обработка номенклатуры из IntBus с внутренним кодом: Н7
+2025-04-21 14:29:46 [http-nio-8080-exec-9] INFO  c.t.app.controller.SyncController - Создание новой номенклатуры с внутренним кодом: Н7
+2025-04-21 14:29:46 [http-nio-8080-exec-9] INFO  c.t.app.controller.SyncController - Номенклатура с ID 11 успешно создана
+2025-04-21 14:47:45 [http-nio-8080-exec-9] INFO  c.t.a.c.NomenclatureController - Номенклатура с ID 11 успешно удалена
+2025-04-21 14:48:27 [http-nio-8080-exec-5] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, dataType, data]
+2025-04-21 14:48:27 [http-nio-8080-exec-5] INFO  c.t.app.controller.SyncController - Обработка номенклатуры из IntBus с внутренним кодом: Н7
+2025-04-21 14:48:27 [http-nio-8080-exec-5] INFO  c.t.app.controller.SyncController - Создание новой номенклатуры с внутренним кодом: Н7
+2025-04-21 14:48:27 [http-nio-8080-exec-5] INFO  c.t.app.controller.SyncController - Номенклатура с ID 12 успешно создана
+2025-04-21 14:52:24 [http-nio-8080-exec-3] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, dataType, data]
+2025-04-21 14:52:24 [http-nio-8080-exec-3] INFO  c.t.app.controller.SyncController - Обработка номенклатуры из IntBus с внутренним кодом: Н7
+2025-04-21 14:52:24 [http-nio-8080-exec-3] INFO  c.t.app.controller.SyncController - Найдена существующая номенклатура с ID: 12
+2025-04-21 14:52:24 [http-nio-8080-exec-3] INFO  c.t.app.controller.SyncController - Номенклатура с ID 12 успешно обновлена
+2025-04-21 14:56:00 [http-nio-8080-exec-10] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, dataType, data]
+2025-04-21 14:56:00 [http-nio-8080-exec-10] INFO  c.t.app.controller.SyncController - Обработка номенклатуры из IntBus с внутренним кодом: Н7
+2025-04-21 14:56:00 [http-nio-8080-exec-10] INFO  c.t.app.controller.SyncController - Найдена существующая номенклатура с ID: 12
+2025-04-21 14:56:00 [http-nio-8080-exec-10] INFO  c.t.app.controller.SyncController - Номенклатура с ID 12 успешно обновлена
+2025-04-21 15:07:56 [http-nio-8080-exec-3] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, dataType, data]
+2025-04-21 15:07:56 [http-nio-8080-exec-3] INFO  c.t.app.controller.SyncController - Обработка номенклатуры из IntBus с внутренним кодом: Н7
+2025-04-21 15:07:56 [http-nio-8080-exec-3] INFO  c.t.app.controller.SyncController - Найдена существующая номенклатура с ID: 12
+2025-04-21 15:07:56 [http-nio-8080-exec-3] INFO  c.t.app.controller.SyncController - Номенклатура с ID 12 успешно обновлена
+2025-04-21 15:09:39 [http-nio-8080-exec-7] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, type, data]
+2025-04-21 15:12:33 [http-nio-8080-exec-8] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, dataType, data]
+2025-04-21 15:12:33 [http-nio-8080-exec-8] INFO  c.t.app.controller.SyncController - Обработка номенклатуры из IntBus с внутренним кодом: Н11
+2025-04-21 15:12:33 [http-nio-8080-exec-8] INFO  c.t.app.controller.SyncController - Создание новой номенклатуры с внутренним кодом: Н11
+2025-04-21 15:12:33 [http-nio-8080-exec-8] INFO  c.t.app.controller.SyncController - Номенклатура с ID 13 успешно создана
+2025-04-21 15:33:21 [http-nio-8080-exec-8] INFO  c.t.a.c.NomenclatureController - Номенклатура с ID 13 успешно удалена
+2025-04-21 15:33:23 [http-nio-8080-exec-6] INFO  c.t.a.c.NomenclatureController - Номенклатура с ID 12 успешно удалена
+2025-04-21 20:45:49 [http-nio-8080-exec-2] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, dataType, data]
+2025-04-21 20:45:49 [http-nio-8080-exec-2] INFO  c.t.app.controller.SyncController - Обработка номенклатуры из IntBus с внутренним кодом: Н11
+2025-04-21 20:45:49 [http-nio-8080-exec-2] INFO  c.t.app.controller.SyncController - Создание новой номенклатуры с внутренним кодом: Н11
+2025-04-21 20:45:49 [http-nio-8080-exec-2] INFO  c.t.app.controller.SyncController - Номенклатура с ID 14 успешно создана
+2025-04-21 20:47:14 [http-nio-8080-exec-4] INFO  c.t.app.controller.SyncController - Получены данные из IntBus: [apikey, sender, dataType, data]
+2025-04-21 20:47:14 [http-nio-8080-exec-4] INFO  c.t.app.controller.SyncController - Обработка номенклатуры из IntBus с внутренним кодом: Н11
+2025-04-21 20:47:14 [http-nio-8080-exec-4] INFO  c.t.app.controller.SyncController - Найдена существующая номенклатура с ID: 14
+2025-04-21 20:47:14 [http-nio-8080-exec-4] INFO  c.t.app.controller.SyncController - Номенклатура с ID 14 успешно обновлена

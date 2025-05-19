@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamCenter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .jumbotron {
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            background-color: #e9ecef;
+            border-radius: 0.3rem;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            background-color: #f5f5f5;
+        }
+        .card {
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white py-3 mb-4">
+        <div class="container">
+            <h1 class="h3 mb-0">TeamCenter</h1>
+        </div>
+    </header>
+
+    <main class="container pb-5 mb-5">
+        <div class="jumbotron">
+            <h2>Добро пожаловать в TeamCenter</h2>
+            <p class="lead">Система управления номенклатурой и ЛСИ</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Номенклатура</h5>
+                        <p class="card-text">Управление элементами номенклатуры.</p>
+                        <a href="/nomenclature" class="btn btn-primary">Перейти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">ЛСИ</h5>
+                        <p class="card-text">Управление логической структурой изделия.</p>
+                        <a href="/lsi" class="btn btn-success">Перейти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Импорт/Экспорт</h5>
+                        <p class="card-text">Работа с Excel-файлами.</p>
+                        <a href="/excel/import" class="btn btn-info">Импорт</a>
+                        <a href="/excel/export" class="btn btn-secondary">Экспорт</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer text-center text-muted">
+        <div class="container">
+            <span>&copy; 2025 TeamCenter. Все права защищены</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

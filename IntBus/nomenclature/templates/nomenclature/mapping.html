@@ -1,0 +1,157 @@
+{% extends 'nomenclature/base.html' %}
+{% load custom_filters %}
+
+{% block title %}Маппинг полей{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Маппинг полей для отправки в {{ target_display }}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <p><strong>Исходные данные:</strong> {{ source_type|title }} ID: {{ source_id }}</p>
+                        <p><strong>Целевая система:</strong> {{ target_display }}</p>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <h5>Обязательные поля для {{ target_display }}:</h5>
+                        {% if target == 'ATOM' %}
+                            <ul>
+                                <li><strong>name</strong> - Название (будет заполнено автоматически, если не маппировано)</li>
+                                <li><strong>code</strong> - Код (будет заполнено автоматически, если не маппировано)</li>
+                            </ul>
+                        {% elif target == 'TEAMCENTER' %}
+                            {% if source_type == 'nomenclature' %}
+                            <ul>
+                                <li><strong>name</strong> - Название (будет заполнено автоматически, если не маппировано)</li>
+                                <li><strong>code</strong> - Код (будет заполнено автоматически, если не маппировано)</li>
+                                <li><strong>nomenclature_id</strong> - ID номенклатуры (будет заполнено автоматически, если не маппировано)</li>
+                                <li><strong>description</strong> - Описание (будет заполнено автоматически, если не маппировано)</li>
+                            </ul>
+                            {% else %}
+                            <ul>
+                                <li><strong>name</strong> - Название (будет заполнено автоматически, если не маппировано)</li>
+                                <li><strong>lsi_id</strong> - ID ЛСИ (будет заполнено автоматически, если не маппировано)</li>
+                                <li><strong>description</strong> - Описание (будет заполнено автоматически, если не маппировано)</li>
+                                <li><strong>items</strong> - Элементы ЛСИ (будет заполнено автоматически, если не маппировано)</li>
+                            </ul>
+                            {% endif %}
+                        {% endif %}
+                        <p>Примечание: Если вы не укажете маппинг для обязательных полей, они будут заполнены значениями по умолчанию.</p>
+                    </div>
+                    
+                    {% if mapping_data and mapping_data.status == 'success' %}
+                        <div class="mb-3">
+                            <button id="loadSavedMapping" class="btn btn-info" {% if not saved_mapping %}disabled{% endif %}>Загрузить сохраненный маппинг</button>
+                            <button id="resetMapping" class="btn btn-warning">Сбросить маппинг</button>
+                        </div>
+                        
+                        <form id="mappingForm" action="/apply-mapping/" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="source_id" value="{{ source_id }}">
+                            <input type="hidden" name="source_type" value="{{ source_type }}">
+                            <input type="hidden" name="target" value="{{ target }}">
+                            
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Поле источника</th>
+                                            <th>Поле назначения</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for source_tag in mapping_data.mapping_table.source_tags %}
+                                        <tr>
+                                            <td>{{ source_tag }}</td>
+                                            <td>
+                                                <select name="field_mapping[{{ source_tag }}]" class="form-control mapping-select" data-source="{{ source_tag }}">
+                                                    <option value="">-- Не маппить --</option>
+                                                    {% for target_tag in mapping_data.mapping_table.target_tags %}
+                                                    <option value="{{ target_tag }}" 
+                                                        {% if saved_mapping and source_tag in saved_mapping and saved_mapping|get_item:source_tag == target_tag %}
+                                                            selected
+                                                        {% elif not saved_mapping and source_tag == target_tag %}
+                                                            selected
+                                                        {% endif %}>
+                                                        {{ target_tag }}
+                                                    </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-primary">Применить маппинг и отправить</button>
+                                <a href="{% if source_type == 'lsi' %}{% url 'lsi_list' %}{% else %}{% url 'nomenclature_list' %}{% endif %}" class="btn btn-secondary">Отмена</a>
+                            </div>
+                        </form>
+                    {% else %}
+                        <div class="alert alert-danger">
+                            <p>Ошибка при получении данных для маппинга: {{ mapping_data.message }}</p>
+                        </div>
+                        <a href="{% if source_type == 'lsi' %}{% url 'lsi_list' %}{% else %}{% url 'nomenclature_list' %}{% endif %}" class="btn btn-secondary">Вернуться к списку</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if saved_mapping %}
+<script>
+    // Сохраненный маппинг из cookies
+    const savedMapping = {{ saved_mapping|safe }};
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Кнопка загрузки сохраненного маппинга
+        const loadSavedMappingBtn = document.getElementById('loadSavedMapping');
+        if (loadSavedMappingBtn) {
+            loadSavedMappingBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                applyMappingFromSaved();
+            });
+        }
+        
+        // Кнопка сброса маппинга
+        const resetMappingBtn = document.getElementById('resetMapping');
+        if (resetMappingBtn) {
+            resetMappingBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                resetAllMappings();
+            });
+        }
+        
+        // Функция для применения сохраненного маппинга
+        function applyMappingFromSaved() {
+            const selects = document.querySelectorAll('.mapping-select');
+            selects.forEach(select => {
+                const sourceField = select.getAttribute('data-source');
+                if (savedMapping[sourceField]) {
+                    select.value = savedMapping[sourceField];
+                } else {
+                    select.value = "";
+                }
+            });
+        }
+        
+        // Функция для сброса всех маппингов
+        function resetAllMappings() {
+            const selects = document.querySelectorAll('.mapping-select');
+            selects.forEach(select => {
+                select.value = "";
+            });
+        }
+    });
+</script>
+{% endif %}
+
+{% endblock %} 

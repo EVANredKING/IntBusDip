@@ -1,0 +1,34 @@
+# Конфигурация для Docker-среды
+
+# Настройки базы данных H2
+spring.datasource.url=jdbc:h2:file:/app/data/teamcenterdb;DB_CLOSE_DELAY=-1
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.driver-class-name=org.h2.Driver
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+# Hibernate настройки
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.format_sql=false
+
+# Включение консоли H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+spring.h2.console.settings.web-allow-others=true
+
+# Логирование
+logging.level.root=INFO
+logging.level.com.teamcenter=DEBUG
+logging.file.name=/app/logs/application.log
+
+# Веб-сервер
+server.port=8082
+server.servlet.context-path=/
+
+# Безопасность
+spring.security.user.name=admin
+spring.security.user.password=admin
+
+# Управление сессиями
+server.servlet.session.timeout=30m 

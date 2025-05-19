@@ -1,0 +1,108 @@
+INFO 2025-05-05 08:45:49,461 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 08:46:07,601 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-05-05 08:46:08,213 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+WARNING 2025-05-05 08:46:11,561 log Not Found: /favicon.ico
+WARNING 2025-05-05 08:46:11,574 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-05 08:49:00,156 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 08:52:21,387 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 09:10:24,967 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 09:22:55,708 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 09:41:04,792 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 09:43:26,327 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 09:47:28,002 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 09:51:36,713 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 10:03:50,294 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 10:10:56,772 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 12:03:29,781 autoreload Watching for file changes with StatReloader
+INFO 2025-05-05 12:19:48,331 autoreload Watching for file changes with StatReloader
+WARNING 2025-05-05 12:20:08,395 base Session data corrupted
+INFO 2025-05-05 12:20:08,405 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 200 6237
+WARNING 2025-05-05 12:20:24,598 base Session data corrupted
+INFO 2025-05-05 12:20:24,606 basehttp "GET / HTTP/1.1" 302 0
+WARNING 2025-05-05 12:20:24,627 base Session data corrupted
+INFO 2025-05-05 12:20:24,630 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+WARNING 2025-05-05 12:20:25,773 base Session data corrupted
+INFO 2025-05-05 12:20:25,775 basehttp "GET /nomenclature/ HTTP/1.1" 302 0
+WARNING 2025-05-05 12:20:25,782 log Not Found: /nomenclature/accounts/login/
+WARNING 2025-05-05 12:20:25,783 basehttp "GET /nomenclature/accounts/login/?next=/nomenclature/ HTTP/1.1" 404 179
+WARNING 2025-05-05 12:20:31,265 base Session data corrupted
+INFO 2025-05-05 12:20:31,267 basehttp "GET /lsi/ HTTP/1.1" 302 0
+WARNING 2025-05-05 12:20:31,270 log Not Found: /lsi/accounts/login/
+WARNING 2025-05-05 12:20:31,270 basehttp "GET /lsi/accounts/login/?next=/lsi/ HTTP/1.1" 404 179
+WARNING 2025-05-05 12:21:00,817 log Not Found: /favicon.ico
+WARNING 2025-05-05 12:21:00,819 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-05-16 14:38:43,863 autoreload Watching for file changes with StatReloader
+INFO 2025-05-16 14:41:58,633 autoreload Watching for file changes with StatReloader
+INFO 2025-05-16 14:54:19,504 autoreload Watching for file changes with StatReloader
+WARNING 2025-05-16 14:54:27,942 base Session data corrupted
+INFO 2025-05-16 14:54:27,952 basehttp "GET /nomenclature/ HTTP/1.1" 302 0
+WARNING 2025-05-16 14:54:27,965 log Not Found: /nomenclature/accounts/login/
+WARNING 2025-05-16 14:54:27,966 basehttp "GET /nomenclature/accounts/login/?next=/nomenclature/ HTTP/1.1" 404 179
+WARNING 2025-05-16 14:54:28,129 log Not Found: /favicon.ico
+WARNING 2025-05-16 14:54:28,130 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+WARNING 2025-05-16 14:54:53,715 base Session data corrupted
+INFO 2025-05-16 14:54:53,720 basehttp "GET / HTTP/1.1" 302 0
+WARNING 2025-05-16 14:54:53,842 base Session data corrupted
+INFO 2025-05-16 14:54:53,848 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+WARNING 2025-05-16 14:54:59,445 base Session data corrupted
+INFO 2025-05-16 14:54:59,478 basehttp "GET /register/ HTTP/1.1" 200 6591
+WARNING 2025-05-16 14:55:11,456 base Session data corrupted
+INFO 2025-05-16 14:55:11,459 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 200 6237
+WARNING 2025-05-16 14:55:13,365 base Session data corrupted
+INFO 2025-05-16 14:55:13,369 basehttp "GET /register/ HTTP/1.1" 200 6591
+WARNING 2025-05-16 14:55:24,690 base Session data corrupted
+INFO 2025-05-16 14:55:24,696 basehttp "POST /register/ HTTP/1.1" 200 6834
+INFO 2025-05-16 14:55:42,218 basehttp "POST /register/ HTTP/1.1" 302 0
+WARNING 2025-05-16 14:55:42,238 base Session data corrupted
+INFO 2025-05-16 14:55:42,242 basehttp "GET /login/ HTTP/1.1" 200 6216
+WARNING 2025-05-16 14:55:52,397 base Session data corrupted
+INFO 2025-05-16 14:55:52,420 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-05-16 14:55:52,470 basehttp "GET / HTTP/1.1" 200 7875
+INFO 2025-05-16 15:01:02,370 autoreload /app/intbus_project/settings.py changed, reloading.
+INFO 2025-05-16 15:01:02,787 autoreload Watching for file changes with StatReloader
+INFO 2025-05-16 15:14:07,178 autoreload Watching for file changes with StatReloader
+WARNING 2025-05-16 15:15:47,309 base Session data corrupted
+INFO 2025-05-16 15:15:47,317 basehttp "GET / HTTP/1.1" 302 0
+WARNING 2025-05-16 15:15:47,347 base Session data corrupted
+INFO 2025-05-16 15:15:47,350 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+WARNING 2025-05-16 15:15:47,510 log Not Found: /favicon.ico
+WARNING 2025-05-16 15:15:47,510 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+WARNING 2025-05-16 15:15:57,264 base Session data corrupted
+INFO 2025-05-16 15:15:57,266 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 200 6237
+WARNING 2025-05-16 15:16:06,619 base Session data corrupted
+INFO 2025-05-16 15:16:06,632 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-05-16 15:16:06,655 basehttp "GET / HTTP/1.1" 200 7874
+INFO 2025-05-16 15:16:13,211 basehttp "GET /nomenclature/ HTTP/1.1" 200 12037
+INFO 2025-05-18 11:24:05,973 autoreload Watching for file changes with StatReloader
+WARNING 2025-05-18 11:25:02,222 log Not Found: /favicon.ico
+WARNING 2025-05-18 11:25:02,224 basehttp "GET /favicon.ico HTTP/1.1" 404 179
+WARNING 2025-05-18 11:25:44,560 base Session data corrupted
+INFO 2025-05-18 11:25:44,569 basehttp "GET / HTTP/1.1" 302 0
+WARNING 2025-05-18 11:25:44,611 base Session data corrupted
+INFO 2025-05-18 11:25:44,612 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+WARNING 2025-05-18 11:25:53,162 base Session data corrupted
+INFO 2025-05-18 11:25:53,175 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-05-18 11:25:53,211 basehttp "GET / HTTP/1.1" 200 7874
+INFO 2025-05-18 11:25:56,521 basehttp "GET /nomenclature/ HTTP/1.1" 200 12037
+INFO 2025-05-18 12:08:55,907 autoreload Watching for file changes with StatReloader
+WARNING 2025-05-18 12:09:42,021 base Session data corrupted
+INFO 2025-05-18 12:09:42,029 basehttp "GET / HTTP/1.1" 302 0
+WARNING 2025-05-18 12:09:42,060 base Session data corrupted
+INFO 2025-05-18 12:09:42,062 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+WARNING 2025-05-18 12:09:43,859 base Session data corrupted
+INFO 2025-05-18 12:09:43,872 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-05-18 12:09:43,900 basehttp "GET / HTTP/1.1" 200 7874
+INFO 2025-05-18 12:09:47,775 basehttp "POST /api/sync/ HTTP/1.1" 302 0
+INFO 2025-05-18 12:09:47,776 basehttp "GET /sync/api/sync/ HTTP/1.1" 200 241
+WARNING 2025-05-18 12:09:51,636 base Session data corrupted
+INFO 2025-05-18 12:09:51,638 basehttp "GET / HTTP/1.1" 302 0
+WARNING 2025-05-18 12:09:51,651 base Session data corrupted
+INFO 2025-05-18 12:09:51,653 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 5888
+WARNING 2025-05-18 12:09:53,376 base Session data corrupted
+INFO 2025-05-18 12:09:53,391 basehttp "POST /accounts/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-05-18 12:09:53,408 basehttp "GET / HTTP/1.1" 200 7874
+INFO 2025-05-18 12:09:55,063 basehttp "GET /nomenclature/ HTTP/1.1" 200 12037
+INFO 2025-05-19 11:54:54,015 autoreload /app/intbus_project/docker_settings.py changed, reloading.
+INFO 2025-05-19 11:54:55,011 autoreload Watching for file changes with StatReloader
+INFO 2025-05-19 11:57:52,546 autoreload /app/intbus_project/docker_settings.py changed, reloading.
+INFO 2025-05-19 11:57:53,374 autoreload Watching for file changes with StatReloader
