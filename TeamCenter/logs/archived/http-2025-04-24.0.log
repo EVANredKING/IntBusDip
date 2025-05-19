@@ -1,9 +1,0 @@
-2025-04-24 13:49:57 - HTTP GET http://localhost:8081/sync/api/csrf-token/
-2025-04-24 13:49:57 - Accept=[application/json, application/*+json]
-2025-04-24 13:49:57 - Response 200 OK
-2025-04-24 13:49:57 - Reading to [java.util.Map<?, ?>]
-2025-04-24 13:49:57 - HTTP POST http://localhost:8081/sync/api/sync/
-2025-04-24 13:49:57 - Accept=[application/json, text/plain, application/*+json, */*]
-2025-04-24 13:49:57 - Writing [{apikey=TEAMCENTER-INTBUS-KEY, data={data={owner=engineer (engineer), projectList=, cipher=БУ-001, drawingNumber=ЧЕРТЕЖ-001-2023, componentID=xyzABC123_456DEFGHIJKLMNOPQ, unitOfMeasure=, lastModifiedDate=2025-04-09 01:57:32.516066, description=Тестовая номенклатура, fullName=Блок управления системой электроснабжения, creationDate=2025-04-09 01:57:32.516066, type=IL2_ControlBlock, abbreviation=БУ, revision=01, kvtCode=789012, itemID=NM123456-B-001-00-00-00-B-00/01, ekpsCode=654321, typeOfNomenclature=Блок, name=Блок управления системой электроснабжения, releaseStatus=, lastModifiedUser=Иванов И.И. (ivanovii), id=1, shortName=Блок управления, internalCode=NM123456-B-001-00-00-00-B-00/01}, dataType=nomenclature, source=TeamCenter}, sender=TeamCenter}] as "application/json"
-2025-04-24 13:49:57 - Response 200 OK
-2025-04-24 13:49:57 - Reading to [java.lang.String]

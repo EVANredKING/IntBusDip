@@ -20,6 +20,10 @@ RUN apt-get update && apt-get install -y curl && \
     apt-get install -y nodejs && \
     cd frontend && npm install && npm run build && cd ..
 
+# Изменяем пути в index.html (с абсолютных на относительные)
+RUN sed -i 's|href="/|href="./|g' frontend/build/index.html && \
+    sed -i 's|src="/|src="./|g' frontend/build/index.html
+
 # Сборка проекта
 RUN mvn clean package -DskipTests
 
@@ -27,17 +31,23 @@ FROM amazoncorretto:21-alpine
 
 WORKDIR /app
 
-# Создаем директории для H2 данных и логов
-RUN mkdir -p /app/logs /app/data /app/frontend/build
+# Создаем директории для H2 данных, логов и статических файлов
+RUN mkdir -p /app/logs /app/data /app/frontend/build/static/js /app/frontend/build/static/css /app/frontend/build/static/media
 
 # Копируем JAR-файл из предыдущего этапа
 COPY --from=build /app/target/*.jar app.jar
 
-# Копируем собранный фронтенд из предыдущего этапа
-COPY --from=build /app/frontend/build /app/frontend/build
+# Копируем собранный фронтенд из предыдущего этапа - важно сохранить структуру директорий
+COPY --from=build /app/frontend/build/ /app/frontend/build/
 
 # Копируем файл конфигурации для Docker
 COPY src/main/resources/application-docker.properties /app/
+
+# Проверяем содержимое директории frontend/build (для отладки)
+RUN ls -la /app/frontend/build/ && \
+    ls -la /app/frontend/build/static/ && \
+    ls -la /app/frontend/build/static/js/ && \
+    ls -la /app/frontend/build/static/css/
 
 # Открываем порт
 EXPOSE 3000
